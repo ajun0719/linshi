@@ -1,0 +1,34 @@
+<view>
+    <view bindtap="__e" class="housing_list_item_box" data-event-opts="{{[ [ 'tap',[ [ 'onRoomDetails',['$0'],[ [ ['housing_lists','',index,'CZWResourcesID'] ] ] ] ] ] ]}}" wx:for="{{housing_lists}}" wx:key="index">
+        <view class="housing_list_item_img_box">
+            <image class="housing_list_item_img housing_list_item_img_bg" lazyLoad="true" mode="aspectFill" src="/static/no_photo.png"></image>
+            <image binderror="__e" class="housing_list_item_img" data-event-opts="{{[ [ 'error',[ [ 'imageError',['$event'] ] ] ] ]}}" lazyLoad="true" mode="aspectFill" src="{{item.imgurl?img_url+item.imgurl:'/static/no_photo.png'}}"></image>
+        </view>
+        <view class="housing_list_item_content">
+            <view class="housing_name1 one_row_overflow">{{item.Title+''}}</view>
+            <view class="housing_address one_row_overflow" style="margin-top:0;">
+                <uni-icons bind:__l="__l" color="#666" size="20" type="location" vueId="{{'26394f02-1-'+index}}"></uni-icons>
+                <text style="font-size:28rpx;">{{item.BuildingAll}}</text>
+            </view>
+            <view style="margin-top:0;">
+                <view class="housing_configuration_item1">{{item.Tags}}</view>
+            </view>
+            <view class="room_tip1">
+                <view class="zj_hx_mj1">
+                    <view class="yuezu1">
+                        <text class="Rent1">{{(item.Rent||0)+'/月'}}</text>
+                        <text class="Rent_title1">月租</text>
+                    </view>
+                    <view class="yuezu1">
+                        <text class="Rent1">{{item.HouseModel||''}}</text>
+                        <text class="Rent_title1">户型</text>
+                    </view>
+                    <view class="yuezu1">
+                        <text class="Rent1">{{(item.Space||0)+'㎡'}}</text>
+                        <text class="Rent_title1">面积</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

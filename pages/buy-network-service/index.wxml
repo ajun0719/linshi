@@ -1,0 +1,36 @@
+<view>
+    <view wx:if="{{mealData}}">
+        <view class="service-manager">
+            <view class="titleTip">运营范围</view>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="{{20}}" right="{{true}}" title="运营商:" type="{{text}}" value="{{mealData.OperatorName}}" vueId="739ab1bd-1"></i-input>
+        </view>
+        <view class="adcolumnMessage">
+            <text class="serviceDataTip">套餐说明</text>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="套餐类型:" type="text" value="新装" vueId="739ab1bd-2"></i-input>
+            <view class="content_name">
+                <view class="name_Star">
+                    <view>套餐:</view>
+                </view>
+                <text style="width:550rpx;text-align:right;">{{mealData.Title}}</text>
+            </view>
+            <i-input bind:__l="__l" disabled="{{true}}" isRedValue="true" maxlength="20" right="{{true}}" title="基本价格:" type="text" value="{{mealData.Price+'元'}}" vueId="739ab1bd-3"></i-input>
+            <view class="service-content">
+                <view class="label" style="margin:16rpx;">套餐描述</view>
+                <view class="content-text">{{''+mealData.Content+''}}</view>
+            </view>
+        </view>
+        <view class="adcolumnMessage">
+            <text class="serviceDataTip">其他费用</text>
+            <view wx:for="{{mealData.CostList}}" wx:key="index">
+                <i-input bind:__l="__l" disabled="{{true}}" isRedValue="true" maxlength="20" right="{{true}}" title="{{item.CostName}}" type="text" value="{{item.CostAmount+'元'}}" vueId="{{'739ab1bd-4-'+index}}"></i-input>
+            </view>
+        </view>
+        <view class="adcolumnMessage">
+            <text class="serviceDataTip">总金额</text>
+            <i-input bind:__l="__l" disabled="{{true}}" isRedValue="true" maxlength="20" right="{{true}}" title="全部费用总和" type="text" value="{{mealData.TotalPrice+'元'}}" vueId="739ab1bd-5"></i-input>
+        </view>
+        <view class="btn-save-class">
+            <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'buyServiceClick',['$event'] ] ] ] ]}}">前往下单</button>
+        </view>
+    </view>
+</view>

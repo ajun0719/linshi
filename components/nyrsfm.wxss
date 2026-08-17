@@ -1,0 +1,31 @@
+.picker-text.data-v-53788661 {
+    font-size: 30rpx;
+    padding: 20rpx
+}
+
+.c3.data-v-53788661 {
+    color: #333
+}
+
+.c7.data-v-53788661 {
+    color: #777
+}
+
+.shijain.data-v-53788661 {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.rl.data-v-53788661 {
+    height: 40rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    width: 40rpx
+}

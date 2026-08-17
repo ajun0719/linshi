@@ -1,0 +1,181 @@
+.addLicensePlate {
+    margin-top: 100rpx;
+    width: 100%
+}
+
+.addLicensePlate .header {
+    color: #999;
+    font-size: 36rpx;
+    padding: 30rpx 0;
+    text-align: center
+}
+
+.addLicensePlate .numBox {
+    width: 100%
+}
+
+.addLicensePlate .numBox .ordinary {
+    background-color: #2d87e7
+}
+
+.addLicensePlate .numBox .newEnergy {
+    background-color: #16dda5
+}
+
+.addLicensePlate .numBox .newEnergy,.addLicensePlate .numBox .ordinary {
+    border-radius: 14rpx;
+    margin: 0 auto;
+    padding: 20rpx;
+    position: relative;
+    width: 660rpx
+}
+
+.addLicensePlate .numBox .newEnergy .whiteBorder,.addLicensePlate .numBox .ordinary .whiteBorder {
+    border: 6rpx solid #fff;
+    border-radius: 10rpx;
+    padding: 100rpx 0
+}
+
+.addLicensePlate .numBox .newEnergy .nums,.addLicensePlate .numBox .ordinary .nums {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 0 10rpx;
+    position: relative
+}
+
+.addLicensePlate .numBox .newEnergy .nums .item,.addLicensePlate .numBox .ordinary .nums .item {
+    border-radius: 10rpx;
+    color: #fff;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin: 0 10rpx;
+    text-align: center;
+    width: 60rpx
+}
+
+.addLicensePlate .numBox .newEnergy .nums .item:nth-of-type(2),.addLicensePlate .numBox .ordinary .nums .item:nth-of-type(2) {
+    margin-right: 20rpx
+}
+
+.addLicensePlate .numBox .newEnergy .nums .item:nth-of-type(3) .addLicensePlate .numBox .ordinary .nums .item:nth-of-type(3) {
+    margin-left: 20rpx
+}
+
+.addLicensePlate .numBox .ordinary .nums .item {
+    background-color: #6fa6e7
+}
+
+.addLicensePlate .numBox .newEnergy .nums .item {
+    background-color: #5ee1bf
+}
+
+.addLicensePlate .numBox .newEnergy .nums .active,.addLicensePlate .numBox .ordinary .nums .active {
+    border: 4rpx solid #fff
+}
+
+.addLicensePlate .numBox .newEnergy .nums .point,.addLicensePlate .numBox .ordinary .nums .point {
+    background-color: #fff;
+    border-radius: 50rpx;
+    height: 10rpx;
+    margin-top: 25rpx;
+    width: 10rpx
+}
+
+.addLicensePlate .numBox .nums .tlPoint,.addLicensePlate .numBox .nums .trPoint {
+    background-color: #fff;
+    border-radius: 50rpx;
+    height: 20rpx;
+    position: absolute;
+    top: -80rpx;
+    width: 20rpx
+}
+
+.addLicensePlate .numBox .nums .tlPoint {
+    left: 140rpx
+}
+
+.addLicensePlate .numBox .nums .trPoint {
+    right: 140rpx
+}
+
+.addLicensePlate .numBox .nums .blPoint,.addLicensePlate .numBox .nums .brPoint {
+    background-color: #fff;
+    border-radius: 50rpx;
+    bottom: -80rpx;
+    height: 10rpx;
+    position: absolute;
+    width: 40rpx
+}
+
+.addLicensePlate .numBox .nums .blPoint {
+    left: 130rpx
+}
+
+.addLicensePlate .numBox .nums .brPoint {
+    right: 130rpx
+}
+
+.addLicensePlate .numBox .ordinary .nums .point {
+    left: 195rpx;
+    position: absolute
+}
+
+.addLicensePlate .numBox .newEnergy .nums .point {
+    left: 160rpx;
+    position: absolute
+}
+
+.addLicensePlate .numBox .toggle {
+    font-size: 30rpx;
+    margin: 20rpx auto;
+    text-align: center;
+    width: 100%
+}
+
+.addLicensePlate .submit {
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-top: 50rpx;
+    width: 700rpx
+}
+
+.keyboard {
+    bottom: 0rpx;
+    left: 0rpx;
+    position: fixed;
+    width: 100%
+}
+
+.confirm-sumbit-view {
+    margin-top: 100rpx;
+    padding: 20rpx
+}
+
+wx-checkbox {
+    height: 90rpx;
+    width: 100rpx
+}
+
+wx-checkbox .wx-checkbox-input {
+    height: 50rpx;
+    margin-right: 0rpx;
+    width: 50rpx
+}
+
+wx-checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #5ee1bf
+}
+
+wx-checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    background: transparent;
+    color: #fff;
+    font-size: 22rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    text-align: center;
+    transform: translate(-50%,-50%) scale(1);
+    -webkit-transform: translate(-50%,-50%) scale(1);
+    width: 28rpx
+}

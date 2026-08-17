@@ -1,0 +1,23 @@
+{
+  "navigationBarTitleText": "手机开门",
+  "usingComponents": {
+    "f-r-blue-opening-door": "components/FR_BlueOpeningDoor",
+    "y-z-blue-opening-door4": "components/YZ_BlueOpeningDoor4",
+    "y-z-blue-opening-door4-ce-shi": "components/YZBlueOpeningDoor4CeShi",
+    "yz-face-opening-door": "components/yz_FaceOpeningDoor",
+    "yz-blue-opening-door6": "components/yz_BlueOpeningDoor_6",
+    "y-z-blue-face3": "components/YZ_Blue_Face_3",
+    "address-view": "components/address-template",
+    "i-cell": "components/iview/cell/index",
+    "i-cell-group": "components/iview/cell-group/index",
+    "i-icon": "components/iview/icon/index",
+    "i-input": "components/iview/input/index",
+    "i-notice-bar": "components/iview/notice-bar/index",
+    "i-panel": "components/iview/panel/index",
+    "i-switch": "components/iview/switch/index",
+    "tui-actionsheet": "components/thorui/actionsheet/actionsheet",
+    "tui-modal": "components/thorui/modal/modal",
+    "tui-skeleton": "components/thorui/tui-skeleton/tui-skeleton",
+    "wuc-tab": "components/wuc-tab/wuc-tab"
+  }
+}

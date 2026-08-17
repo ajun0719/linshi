@@ -1,0 +1,90 @@
+<view>
+    <view class="top">
+        <view class="search-left flex-wrp">
+            <view class="search-content">
+                <icon class="iconfont icon-search"></icon>
+                <input bindinput="__e" class="search-input" confirmType="搜索" data-event-opts="{{[ [ 'input',[ [ 'keyInput',['$event'] ] ] ] ]}}" maxlength="30" placeholder="请输入地址" placeholderClass="phcolor"></input>
+                <button bindtap="__e" class="search-btn" data-event-opts="{{[ [ 'tap',[ [ 'searchKey',['$event'] ] ] ] ]}}">搜索</button>
+            </view>
+        </view>
+    </view>
+    <view class="list-main" wx:if="{{doorList}}">
+        <view>
+            <view class="group-item" data-index="{{index}}" wx:for="{{doorList}}" wx:key="index">
+                <view class="group-info">
+                    <view class="item-child">
+                        <view class="creater-info" data-index="{{index}}">{{item.PointName}}</view>
+                        <view wx:if="{{item.LockType===1}}">
+                            <view bindtap="__e" class="{{[ 'iconfont','icon-open-door','add-btn',[item.opening==true?'opening':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'openDoorClick',['$event'] ] ] ] ]}}" data-index="{{index}}" wx:if="{{item.Cmd}}">{{item.opening?'开门中':'开门'}}</view>
+                            <view class="{{[ 'iconfont','icon-open-door','add-btn',[true?'unopen':''] ]}}" data-index="{{index}}" wx:else>开门</view>
+                        </view>
+                        <block wx:else>
+                            <view wx:if="{{item.LockType===2}}">
+                                <view bindtap="__e" class="{{[ 'iconfont','icon-open-door','add-btn',[item.opening==true?'opening':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'openRenlianClick',['$event'] ] ] ] ]}}" data-index="{{index}}" data-item="{{item}}" wx:if="{{item.Cmd}}">{{item.opening?'开门中':'开门'}}</view>
+                                <view class="{{[ 'iconfont','icon-open-door','add-btn',[true?'unopen':''] ]}}" data-index="{{index}}" wx:else>开门</view>
+                            </view>
+                            <block wx:else>
+                                <view bindtap="__e" class="{{[item.opening?'backfe3a20':'back16b2f0']}}" data-event-opts="{{[ [ 'tap',[ [ 'openDoorClick',['$event'] ] ] ] ]}}" data-index="{{index}}" style="border-radius:10rpx;" wx:if="{{item.LockType===3}}">
+                                    <view class="lanyakaimen" wx:if="{{item.Cmd}}">
+                                        <view class="iconfont icon-open-door add-btn1"></view>
+                                        <view class="lanya">{{item.opening?'开门中':'蓝牙开门'}}</view>
+                                    </view>
+                                    <view class="lanyakaimen" wx:else>
+                                        <view class="{{['iconfont','icon-open-door','add-btn1',item.opening?'backfe3a20':'back16b2f0']}}" data-index="{{index}}"></view>
+                                        <view class="lanya">蓝牙开门</view>
+                                    </view>
+                                </view>
+                            </block>
+                        </block>
+                    </view>
+                    <view class="item-view">
+                        <view class="detail-info">
+                            <view class="{{['child-info',item.pdtime>14?'c6eea27':'cdb4444']}}" wx:if="{{item.Cmd}}">
+                                <text>有效期: </text>
+                                <text>{{item.day}}</text>
+                                <text wx:if="{{item.pdtime<14&&item.pdtime>0}}">（即将到期）</text>
+                            </view>
+                            <view class="child-info expire" wx:else>{{'有效期: '+item.day+' (已过期)'}}</view>
+                        </view>
+                        <view style="width:90px;display:flex;justify-content:center;" wx:if="{{item.LockType===1}}">
+                            <text bindtap="__e" class="tx-llmm" data-event-opts="{{[ [ 'tap',[ [ 'showLlmm',['$event'] ] ] ] ]}}" data-item="{{item}}" wx:if="{{item.Cmd}}">临时密码</text>
+                            <text class="tx-llmm expire" data-sn="{{item.SN}}" wx:else>临时密码</text>
+                        </view>
+                        <block wx:else>
+                            <view style="width:90px;display:flex;justify-content:center;" wx:if="{{item.LockType===2}}">
+                                <text bindtap="__e" class="tx-llmm" data-event-opts="{{[ [ 'tap',[ [ 'showLlmm',['$event'] ] ] ] ]}}" data-item="{{item}}" wx:if="{{item.Cmd}}">临时密码</text>
+                                <text class="tx-llmm expire" wx:else>临时密码</text>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="true" class="modal" wx:if="{{visible}}">
+        <view class="mask"></view>
+        <view class="gopay_tip">
+            <view class="title-view">
+                <text class="tip_title">临时密码生成</text>
+            </view>
+            <view class="llmm-content-view">
+                <text class="tip_content" space="emsp" wx:if="{{LockType===1}}">临时密码为:</text>
+                <text class="content_llmm" selectable="true">{{llmm?llmm:''}}</text>
+            </view>
+            <view class="tishi">{{''+(lockType===2?'请进入屏幕键盘，输入编号和密码即可开门':'请进入屏幕键盘，输入密码即可开门')+''}}</view>
+            <view class="btn-modal">
+                <button bindtap="__e" class="tip_cancel" data-event-opts="{{[ [ 'tap',[ [ 'cancelLlmm',['$event'] ] ] ] ]}}">确定</button>
+                <button bindtap="__e" class="tip_confirm" data-event-opts="{{[ [ 'tap',[ [ 'copyLlmm',['$event'] ] ] ] ]}}">复制</button>
+            </view>
+        </view>
+    </view>
+    <view class="no-data-view" wx:if="{{$root.g0}}">
+        <view>无法查询到相关的信息</view>
+        <view class="empower" wx:if="{{userInfo.UserMob==''||userInfo.UserMob==null}}">
+            <view class="empowertext">如需查询您的业务信息，请<view bindtap="__e" class="empowerPhone" data-event-opts="{{[ [ 'tap',[ [ 'empowerPhone',['$event'] ] ] ] ]}}">授权手机号</view>进行关联。</view>
+        </view>
+    </view>
+    <view class="loading_text" wx:if="{{NotFlag}}">没有更多数据了</view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

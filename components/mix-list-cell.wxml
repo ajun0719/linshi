@@ -1,0 +1,9 @@
+<view class="content">
+    <view bindtap="__e" class="{{['mix-list-cell',border]}}" data-event-opts="{{[ [ 'tap',[ [ 'eventClick',['$event'] ] ] ] ]}}" hoverClass="cell-hover" hoverStayTime="{{50}}">
+        <text class="{{['cell-icon','yticon',icon]}}" style="{{'color:'+iconColor+';'+'font-size:'+iconSize+'rpx'+';'}}" wx:if="{{icon}}"></text>
+        <text class="cell-tit">{{''+title+''}}<text class="otherTitle" style="{{'color:'+otherColor+';'}}" wx:if="{{otherTitle!==''}}">{{otherTitle}}</text>
+        </text>
+        <text class="cell-tip" style="{{'color:'+tipsColor+';'}}" wx:if="{{tips}}">{{tips}}</text>
+        <text class="cell-more"></text>
+    </view>
+</view>

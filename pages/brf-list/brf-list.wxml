@@ -1,0 +1,25 @@
+<view>
+    <tui-skeleton bind:__l="__l" borderRadius="10rpx" vueId="0e3a5ba0-1" wx:if="{{skeletonShow}}"></tui-skeleton>
+    <view class="main-list tui-skeleton">
+        <view bindtap="__e" class="cell" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['$0'],[ [ ['brfList','',index,'NetworkFaultID'] ] ] ] ] ] ]}}" data-index="{{index}}" wx:for="{{brfList}}" wx:key="index">
+            <view class="cell__bd">
+                <view class="address tui-skeleton-rect">{{item.AddressAll}}</view>
+                <view class="des tui-skeleton-rect">{{item.Describe}}</view>
+                <view class="time tui-skeleton-rect">{{'创建于 '+item.CreateTime}}</view>
+            </view>
+            <view class="{{['eventStatus',item.HandleStatus==2?'complete':'',item.HandleStatus==3?'cacenl':'',item.HandleStatus==1?'handling':'']}}">{{item.HandleStatusLable}}</view>
+        </view>
+    </view>
+    <view bindtap="__e" class="add-view" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',[''] ] ] ] ]}}">
+        <text class="iconfont icon-add"></text>
+    </view>
+    <tui-loadmore bind:__l="__l" index="{{3}}" type="primary" visible="{{loadding}}" vueId="0e3a5ba0-2"></tui-loadmore>
+    <tui-nomore bind:__l="__l" visible="{{!pullUpOn}}" vueId="0e3a5ba0-3"></tui-nomore>
+    <view class="no-data-view" wx:if="{{$root.g0}}">
+        <view>无法查询到相关的信息</view>
+        <view class="empower" wx:if="{{userInfo.UserMob==''||userInfo.UserMob==null}}">
+            <view class="empowertext">如需查询您的业务信息，</view>
+            <text class="empowertext">请<text bindtap="__e" class="empowerPhone" data-event-opts="{{[ [ 'tap',[ [ 'empowerPhone',['$event'] ] ] ] ]}}">授权手机号</text>进行关联。</text>
+        </view>
+    </view>
+</view>

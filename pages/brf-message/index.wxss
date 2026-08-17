@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.main-content.data-v-41bf1449 {
+    margin-top: 20rpx
+}
+
+.item-build.data-v-41bf1449 {
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 6px 16px;
+    padding: 5px 1px
+}
+
+.item-build .title.data-v-41bf1449 {
+    display: -webkit-flex;
+    display: flex;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px;
+    text-align: left
+}
+
+.btn.data-v-41bf1449 {
+    margin: 40px 20px 10px
+}
+
+.btn .redbtn.data-v-41bf1449 {
+    background: #e72727;
+    margin-top: 30rpx
+}
+
+.example-body.data-v-41bf1449 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 20rpx
+}
+
+.example-body .tag-view.data-v-41bf1449 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 10rpx 15rpx
+}
+
+.tip.data-v-41bf1449::after {
+    color: #e41f19;
+    content: " (手机号、身份证、宽带账户不能同时为空)";
+    font-size: 22rpx;
+    margin: auto 0;
+    text-align: center
+}
+
+.picker-view.data-v-41bf1449 {
+    left: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    right: 0
+}

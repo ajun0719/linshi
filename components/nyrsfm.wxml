@@ -1,0 +1,6 @@
+<picker bindchange="__e" bindcolumnchange="__e" class="data-v-53788661" data-event-opts="{{[ [ 'change',[ [ 'onChange',['$event'] ] ] ],[ 'columnchange',[ [ 'onColumnChange',['$event'] ] ] ] ]}}" mode="multiSelector" range="{{multiRange}}" value="{{multiIndex}}">
+    <view class="shijain data-v-53788661">
+        <view class="{{['picker-text','data-v-53788661',dateTime?'c3':'c7']}}">{{''+(dateTime||displayTime)+''}}</view>
+        <image alt class="rl _img data-v-53788661" src="{{$root.m0}}"></image>
+    </view>
+</picker>

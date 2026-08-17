@@ -1,0 +1,128 @@
+<view>
+    <view class="top-ba">
+        <view class="top-location">
+            <top-view bind:__l="__l" bind:addressChangeClick="__e" bind:imgHeaderClick="__e" currentAddress="{{currentAddress}}" data-event-opts="{{[ [ '^addressChangeClick',[ ['addressChangeClick'] ] ],[ '^imgHeaderClick',[ ['imgHeaderClick'] ] ] ]}}" isShowXiala="{{true}}" userInfo="{{userInfo}}" vueId="6b3d36ea-1"></top-view>
+        </view>
+        <view class="img-top">
+            <image class="img" src="https://shequpingtai.ximatech.cn/UploadImages/PAArticle/2022-06-20/2355637f6b37411eb6bfa79e064acc91.jpg"></image>
+            <view class="service-view">
+                <view class="scoll-hs">
+                    <view bindtap="__e" class="{{['item1','',index!=0?'bl2':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'buyService',['$event'] ] ] ] ]}}" data-id="{{item.id}}" wx:for="{{servicesList}}" wx:key="index">
+                        <view class="imgb">
+                            <image class="img-item" src="{{item.icon}}"></image>
+                            <image class="lanya" src="{{item.img1}}" wx:if="{{index===1}}"></image>
+                        </view>
+                        <text class="txt">{{item.name}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page">
+        <view class="service-content-view">
+            <view class="item-more">
+                <text class="hot-service-title">本地服务</text>
+            </view>
+            <view class="qfqz-item" style="margin-top:16rpx;">
+                <view bindtap="__e" class="item-more" data-event-opts="{{[ [ 'tap',[ [ 'moreClick',['../../helper-package/housingServices'] ] ] ] ]}}">
+                    <view class="item-qfqz-left">
+                        <text class="iconfont icon-kucunchaxun mz peisong"></text>
+                        <text class="qfqz-title">住房服务</text>
+                    </view>
+                    <view class="more-tx">
+                        <text class="more">更多</text>
+                        <text class="more-icon"></text>
+                    </view>
+                </view>
+                <view class="qfqz-child">
+                    <view bindtap="__e" class="qfqz-child-item" data-event-opts="{{[ [ 'tap',[ ['zffw'] ] ] ]}}">
+                        <view class="qfqz-child-item-text">
+                            <text class="qfqz-child-item-title"> 出租房源 </text>
+                            <text class="qfqz-child-item-content">查找房源信息</text>
+                        </view>
+                        <image class="kaimen" src="/static/images/fangwu1.png"></image>
+                    </view>
+                    <view bindtap="__e" class="qfqz-child-item item-right" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['../../helper-package/bill_list?tab_index=0'] ] ] ] ]}}">
+                        <view class="qfqz-child-item-text">
+                            <text class="qfqz-child-item-title"> 租住信息 </text>
+                            <text class="qfqz-child-item-content">查看租住信息</text>
+                        </view>
+                        <text class="iconfont icon-hetong lodge"></text>
+                    </view>
+                    <view style="display:flex;justify-content:space-between;width:100%;padding-top:20rpx;margin-top:20rpx;">
+                        <view bindtap="__e" class="qfqz-child-item" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['../../repair/Tenant_Order'] ] ] ] ]}}" style="margin-top:0;">
+                            <view class="qfqz-child-item-text">
+                                <text class="qfqz-child-item-title"> 续期订单 </text>
+                                <text class="qfqz-child-item-content">按套续管理费</text>
+                            </view>
+                            <image class="kaimen1" src="/static/images/dd.png"></image>
+                        </view>
+                        <view bindtap="__e" class="qfqz-child-item item-right" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['../../helper-package/AccessBarrier'] ] ] ] ]}}" style="margin-top:0;">
+                            <view class="qfqz-child-item-text">
+                                <text class="qfqz-child-item-title"> 门禁报修 </text>
+                                <text class="qfqz-child-item-content">查看报修信息</text>
+                            </view>
+                            <text class="iconfont icon-wodebaoxiu baoxiu" style="font-size:34px;"></text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="qfqz-item">
+                <view bindtap="__e" class="item-more" data-event-opts="{{[ [ 'tap',[ [ 'moreClick',['../../helper-package/pages/wp-order-type/index'] ] ] ] ]}}">
+                    <view class="item-qfqz-left">
+                        <text class="iconfont icon-jiaofeizhangdan mz"></text>
+                        <text class="qfqz-title">智能水电</text>
+                    </view>
+                    <view class="more-tx">
+                        <text class="more">更多</text>
+                        <text class="more-icon"></text>
+                    </view>
+                </view>
+                <view class="qfqz-child">
+                    <view bindtap="__e" class="qfqz-child-item" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['../../helper-package/pages/electricityMeter/electricity'] ] ] ] ]}}" data-id="5">
+                        <view class="qfqz-child-item-text">
+                            <text class="qfqz-child-item-title"> 智能电表 </text>
+                            <text class="qfqz-child-item-content">查询智能电表</text>
+                        </view>
+                        <text class="iconfont zndianbiao icon-dianbiao_shiti"></text>
+                    </view>
+                    <view bindtap="__e" class="qfqz-child-item item-right" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['../../helper-package/pages/waterMeter/TenantWaterMeter'] ] ] ] ]}}" data-id="6">
+                        <view class="qfqz-child-item-text">
+                            <text class="qfqz-child-item-title"> 智能水表 </text>
+                            <text class="qfqz-child-item-content">查询智能水表</text>
+                        </view>
+                        <text class="iconfont icon-shuibiao_shiti znshuibiao"></text>
+                    </view>
+                </view>
+            </view>
+            <view class="qfqz-item">
+                <view bindtap="__e" class="item-more" data-event-opts="{{[ [ 'tap',[ [ 'onGengduo',['$event'] ] ] ] ]}}">
+                    <view class="item-qfqz-left">
+                        <image class="cdfw" src="/static/images/cdfw.png"></image>
+                        <text class="qfqz-title">充电服务</text>
+                    </view>
+                    <view class="more-tx">
+                        <text class="more">更多</text>
+                        <text class="more-icon"></text>
+                    </view>
+                </view>
+                <view class="qfqz-child">
+                    <view bindtap="__e" class="qfqz-child-item" data-event-opts="{{[ [ 'tap',[ [ 'onDache',['$event'] ] ] ] ]}}" data-id="5">
+                        <view class="qfqz-child-item-text">
+                            <text class="qfqz-child-item-title"> 单车充电 </text>
+                            <text class="qfqz-child-item-content">单车充电服务</text>
+                        </view>
+                        <image class="danche" src="/static/images/charge.png"></image>
+                    </view>
+                    <view bindtap="__e" class="qfqz-child-item item-right" data-event-opts="{{[ [ 'tap',[ [ 'onQiche',['$event'] ] ] ] ]}}" data-id="6">
+                        <view class="qfqz-child-item-text">
+                            <text class="qfqz-child-item-title"> 汽车充电 </text>
+                            <text class="qfqz-child-item-content">汽车充电服务</text>
+                        </view>
+                        <image class="danche1" src="/static/images/car.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

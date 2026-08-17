@@ -1,0 +1,77 @@
+.main {
+    margin-bottom: 100rpx
+}
+
+.goods-list {
+    margin-bottom: 10rpx;
+    margin-top: 20rpx
+}
+
+.goods-list,.list-title {
+    background: #fff;
+    width: 100%
+}
+
+.list-title {
+    color: #000;
+    font-size: 30rpx;
+    padding: 20rpx 0 20rpx 10rpx
+}
+
+.goods-list .a-goods {
+    border-bottom: 1px solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    margin-left: 30rpx;
+    padding: 30rpx 30rpx 30rpx 0;
+    width: 720rpx
+}
+
+.goods-list .a-goods .img-box {
+    height: 160rpx;
+    margin-right: 20rpx;
+    overflow: hidden;
+    width: 160rpx
+}
+
+.listTop {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.order-main {
+    background: #fff
+}
+
+.orderPrice {
+    color: #5a5858;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 28rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 15rpx 10rpx 15rpx 0
+}
+
+.textRedValue {
+    color: #fa1111
+}
+
+.pay-btn {
+    margin-top: 50rpx;
+    padding: 20rpx
+}
+
+.btn-red {
+    background: #d53912;
+    margin-top: 50rpx
+}
+
+.msg {
+    color: #db4444;
+    font-size: 34rpx;
+    padding-left: 20rpx;
+    padding-top: 50rpx
+}

@@ -1,0 +1,31 @@
+<view>
+    <view class="top">
+        <wuc-tab bind:__l="__l" bind:change="__e" bind:updateTabCur="__e" data-event-opts="{{[ [ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ],[ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ],[ '^change',[ ['tabChange'] ] ] ]}}" tabList="{{tabList}}" tabCur="{{TabCur}}" textFlex="{{true}}" vueId="32782da5-1"></wuc-tab>
+    </view>
+    <view class="list-main">
+        <view bindtap="__e" class="group-item" data-event-opts="{{[ [ 'tap',[ [ 'startForAmDetail',['$event'] ] ] ] ]}}" data-index="{{index}}" wx:for="{{recordList}}" wx:key="index">
+            <view class="group-info">
+                <view class="group-name">{{item.Tags}}</view>
+                <view class="creater-info">{{item.AddressAll}}</view>
+                <view class="create-time">{{tutil.formatGroupTime(item.CreateTime)}}</view>
+            </view>
+            <view class="group-status" wx:if="{{item.OrderStatus==4}}">
+                <view class="order-status">已取消</view>
+            </view>
+            <view class="group-status" wx:if="{{item.OrderStatus==3}}">
+                <view class="order-status">未接单</view>
+            </view>
+            <view class="group-status" wx:if="{{item.OrderStatus==2}}">
+                <view class="order-status">正在处理</view>
+            </view>
+            <view class="group-status" wx:if="{{item.OrderStatus==1}}">
+                <view class="order-status">已完成</view>
+            </view>
+        </view>
+    </view>
+    <view class="no-data-view" wx:if="{{$root.g0==0}}">
+        <view class="empityText">暂无数据</view>
+    </view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

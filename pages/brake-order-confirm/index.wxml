@@ -1,0 +1,30 @@
+<view>
+    <view class="main" wx:if="{{orderData}}">
+        <view class="goods-list">
+            <view class="listTop">
+                <view class="list-title">缴费信息</view>
+            </view>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="车辆类型:" type="text" value="{{orderData.IncName}}" vueId="73ab9f26-1" wx:if="{{orderData.IncMonth>0}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="车牌号:" type="text" value="{{orderData.PlateNumber}}" vueId="73ab9f26-2" wx:if="{{orderData.PlateNumber}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="到期时间:" type="text" value="{{orderData.EndTime}}" vueId="73ab9f26-3" wx:if="{{orderData.EndTime&&mode=='1'}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="{{(orderData.IncMonth>0?'到期时间':'入场时间')+':'}}" type="text" value="{{orderData.StartTime}}" vueId="73ab9f26-4" wx:if="{{orderData.StartTime&&mode=='0'}}"></i-input>
+            <view class="orderPrice" wx:if="{{mode==0}}">
+                <view class="textLabel">{{(orderData.IncMonth>0?'续期金额':'缴费金额')+':'}}</view>
+                <text class="textRedValue">{{'¥ '+orderData.Balance}}</text>
+            </view>
+            <view class="ybcTip" wx:if="{{mode=='1'}}">
+                <text class="iconfont icon-tip"></text>
+                <view>{{orderData.errTip}}</view>
+            </view>
+            <view class="ybcTip" wx:if="{{mode=='0'&&orderData.IncMonth>0}}">
+                <text class="iconfont icon-tip"></text>
+                <view>到期时间为月保车上次到期时间</view>
+            </view>
+        </view>
+        <view class="pay-btn">
+            <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'getJsPayParms',['$event'] ] ] ] ]}}" disabled="{{mode=='1'}}" shape="circle">立即支付</button>
+        </view>
+    </view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

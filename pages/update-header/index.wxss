@@ -1,0 +1,78 @@
+.userDefault_avatar,.userinfo-avatar {
+    border-radius: 50%;
+    height: 110rpx;
+    width: 110rpx
+}
+
+.youxiangjiangtu {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.account-update-view {
+    background: #fff;
+    height: auto;
+    margin-top: 10rpx
+}
+
+.label {
+    color: #2e2d2d;
+    font-size: 30rpx
+}
+
+.userName {
+    color: #666363;
+    font-size: 28rpx
+}
+
+.text-cf {
+    color: #189fee;
+    font-size: 28rpx;
+    margin-right: 28rpx
+}
+
+.with_arrow {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA8UExURQAAAJOTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk3d0CiEAAAAUdFJOUwAFDbevoZiOeGxhRKeHf1hRSz0ybptjKgAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAHNJREFUOE+tk0EOgCAQAwFRUARE//9XL/Vm7R6c0yRtAoFd91AuCCNMfzROGMPSKDBGiAPG8PGAMQyNvcMYft5gDENjWWEU3UgZQqkNwsgJQmgVQlAHqCuqXD2CyNVHyFwMg8zFuHkx0iF+L4VcmvG6ds7dcpoCmzwNk7cAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 15px;
+    margin-left: 30rpx;
+    right: 10px;
+    width: 15px
+}
+
+.my-item-headImg,.my-item-username {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 25rpx 30rpx 25rpx 15rpx;
+    position: relative
+}
+
+.my-item-headImg,.my-item-username,.touxiang {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.touxiang {
+    background-color: initial;
+    border: none;
+    border-radius: 50%;
+    color: #666;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0
+}
+
+.touxiang::after {
+    border: none
+}

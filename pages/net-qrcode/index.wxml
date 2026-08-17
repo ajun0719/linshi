@@ -1,0 +1,8 @@
+<view class="main">
+    <view class="qrcode-view">
+        <view class="coupon-type"></view>
+        <view class="qr-code">
+            <image bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'prev',['$event'] ] ] ] ]}}" mode="aspectFit" src="{{'data:image/png;base64,'+resultImg}}"></image>
+        </view>
+    </view>
+</view>

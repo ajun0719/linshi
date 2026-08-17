@@ -1,0 +1,57 @@
+.softKeyboard {
+    width: 100%
+}
+
+.softKeyboard .citykeyboard,.softKeyboard .letterKeyboard {
+    background-color: #dfe3e6;
+    bottom: 0;
+    left: 0;
+    padding: 10rpx;
+    position: absolute;
+    right: 0
+}
+
+.softKeyboard .citykeyboard .btnList,.softKeyboard .letterKeyboard .btnList {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%
+}
+
+.softKeyboard .citykeyboard .btnList .box wx-view,.softKeyboard .letterKeyboard .btnList .box wx-view {
+    background-color: #fff;
+    border-radius: 8rpx;
+    color: #666;
+    display: block;
+    font-size: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 10rpx 9rpx;
+    text-align: center;
+    width: 60rpx
+}
+
+.softKeyboard .citykeyboard .btnList .box wx-view.disabled,.softKeyboard .letterKeyboard .btnList .box wx-view.disabled {
+    background-color: #f3f3f3;
+    color: #a9a9a9
+}
+
+.softKeyboard .citykeyboard .btnList .box .Delete,.softKeyboard .letterKeyboard .btnList .box .Delete {
+    background-color: #b4b7c0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 80% 60%;
+    height: 80rpx;
+    width: 90rpx
+}
+
+.softKeyboard .citykeyboard .btnList .box .ABC,.softKeyboard .letterKeyboard .btnList .box .back {
+    background-color: #b4b7c0;
+    height: 80rpx;
+    width: 90rpx
+}
+
+.softKeyboard .citykeyboard .btnList .box .active,.softKeyboard .letterKeyboard .btnList .box .active {
+    background-color: #f1f1f1
+}

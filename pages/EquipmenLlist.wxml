@@ -1,0 +1,21 @@
+<view class="page">
+    <view class="list">
+        <view class="name_state">
+            <view class="name">{{ObjCharging.name}}</view>
+            <view class="xian1">闲:<view class="xian">{{ObjCharging.xian}}</view>
+            </view>
+        </view>
+        <view class="name_state">
+            <view class="name">{{ObjCharging.name}}</view>
+            <view class="chong">充:<view class="chong1">{{ObjCharging.chong}}</view>
+            </view>
+        </view>
+        <view bindtap="__e" class="address_icon" data-event-opts="{{[ [ 'tap',[ [ 'OnNavigation',['$event'] ] ] ] ]}}">
+            <view class="address">{{ObjCharging.address}}</view>
+            <view class="iconfont icon-address icon"></view>
+        </view>
+    </view>
+    <view bindtap="__e" class="want" data-event-opts="{{[ [ 'tap',[ [ 'OnClick',['$event'] ] ] ] ]}}">
+        <view class="buttom">我要充电</view>
+    </view>
+</view>

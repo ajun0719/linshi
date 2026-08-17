@@ -1,0 +1,81 @@
+<view class="{{[cd==1?'h100':'']}}">
+    <view class="group-info" wx:if="{{cd>1}}">
+        <view class="item-child">
+            <view class="creater-info">{{item.PointName}}</view>
+            <view class="{{[opening?'backfe3a20':'back16b2f0']}}" style="border-radius:10rpx;">
+                <view bindtap="__e" class="lanyakaimen" data-event-opts="{{[ [ 'tap',[ [ 'openDoor_FR',['$event'] ] ] ] ]}}" wx:if="{{item.Cmd}}">
+                    <view class="iconfont icon-open-door add-btn1"></view>
+                    <view class="lanya">{{opening?'开门中':'蓝牙开门'}}</view>
+                </view>
+                <view class="lanyakaimen unopen" wx:else>
+                    <view class="iconfont icon-open-door add-btn1"></view>
+                    <view class="lanya">蓝牙开门</view>
+                </view>
+            </view>
+        </view>
+        <view class="item-view">
+            <view class="detail-info">
+                <view class="{{['child-info1',item.pdtime>14?'c6eea27':'cdb4444']}}" wx:if="{{item.Cmd}}">
+                    <text>有效期: </text>
+                    <text>{{item.day}}</text>
+                    <text wx:if="{{item.pdtime<14&&item.pdtime>0}}">（即将到期）</text>
+                </view>
+                <view class="child-info1 expire" wx:else>{{'有效期: '+item.day+' (已过期)'}}</view>
+            </view>
+            <view style="width:90px;display:flex;justify-content:center;"></view>
+        </view>
+    </view>
+    <view class="yj" wx:if="{{cd==1}}">
+        <view class="item-child PointName">
+            <view class="creater-info1" style="font-size:40rpx;">{{item.PointName}}</view>
+        </view>
+        <view bindtap="__e" class="{{['lykm_title',opening?'bd81e06':'b28d0c9']}}" data-event-opts="{{[ [ 'tap',[ [ 'openDoor_FR',['$event'] ] ] ] ]}}" wx:if="{{item.Cmd}}">
+            <image class="lykm" src="/static/images/lykm.png"></image>
+            <text class="title1">一键开门</text>
+        </view>
+        <view class="lykm_title" wx:else>
+            <image class="lykmNoCmd bfff" src="/static/images/lykm2.png"></image>
+        </view>
+        <view class="item-view1" style="margin-top:60rpx;">
+            <view class="detail-info">
+                <view class="{{['child-info',item.pdtime>14?'c6eea27':'cdb4444']}}" style="font-size:40rpx;" wx:if="{{item.Cmd}}">
+                    <text>有效期: </text>
+                    <text style="margin-left:10rpx;">{{item.day}}</text>
+                    <text wx:if="{{item.pdtime<14&&item.pdtime>0}}">（即将到期）</text>
+                </view>
+                <view class="child-info expire" style="font-size:40rpx;" wx:else>{{'有效期: '+item.day+' (已过期)'}}</view>
+            </view>
+            <view style="display:flex;justify-content:center;font-size:32rpx;margin-top:30rpx;" wx:if="{{item.Cmd&&item.DisTempPW===0}}"></view>
+        </view>
+    </view>
+    <view catchtouchmove="true" class="modal" wx:if="{{visible}}">
+        <view class="mask"></view>
+        <view class="gopay_tip">
+            <view class="title-view">
+                <text class="tip_title">临时密码生成</text>
+            </view>
+            <view class="llmm-content-view">
+                <text class="tip_content1" space="emsp">临时密码为:</text>
+                <text class="content_llmm1" selectable="true">{{llmm?llmm:''}}</text>
+            </view>
+            <view class="tishi">请进入屏幕键盘，输入密码即可开门</view>
+            <view class="btn-modal">
+                <button bindtap="__e" class="tip_cancel" data-event-opts="{{[ [ 'tap',[ [ 'cancelLlmm',['$event'] ] ] ] ]}}">确定</button>
+                <button bindtap="__e" class="tip_confirm" data-event-opts="{{[ [ 'tap',[ [ 'copyLlmm',['$event'] ] ] ] ]}}">复制密码</button>
+            </view>
+        </view>
+    </view>
+    <uni-popup animation="{{false}}" bind:__l="__l" class="vue-ref" data-ref="popup" maskClick="{{false}}" type="center" vueId="2f79e866-1" vueSlots="{{['default']}}">
+        <view class="Tk">
+            <text class="Instruction">提示</text>
+            <textarea class="InstructionTitle" disabled="{{true}}" wx:if="{{OpenType==2||OpenType==1}}">{{Exception}}</textarea>
+            <view class="InstructionTitle tac" wx:if="{{OpenType==3}}">蓝牙下发数据失败</view>
+            <view class="{{['InstructionTitle',OpenType==3?'tac':'']}}" style="margin-top:50rpx;">您可以使用临时密码开门！</view>
+            <view class="anniu">
+                <text bindtap="__e" class="but c3" data-event-opts="{{[ [ 'tap',[ [ 'OnColse',['$event'] ] ] ] ]}}">关闭</text>
+                <text class="line"></text>
+                <text bindtap="__e" class="but c556190" data-event-opts="{{[ [ 'tap',[ [ 'showLlmm',['$event'] ] ] ] ]}}">查看临时密码</text>
+            </view>
+        </view>
+    </uni-popup>
+</view>

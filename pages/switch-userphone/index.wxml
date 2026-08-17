@@ -1,0 +1,21 @@
+<view>
+    <view>
+        <view class="input-view">
+            <view class="input_phone_view">
+                <text class="label">手机号:</text>
+                <input bindinput="__e" class="input-code" data-event-opts="{{[ [ 'input',[ [ 'userPhoneInput',['$event'] ] ] ] ]}}" maxlength="11" mode="normal" placeholder="请输入手机号码" title="手机号：" type="number"></input>
+            </view>
+            <view class="divLine"></view>
+            <view class="input_code-view">
+                <view class="sms-input">
+                    <text class="label">验证码:</text>
+                    <input bindinput="__e" class="input-code" data-event-opts="{{[ [ 'input',[ [ 'codeInput',['$event'] ] ] ] ]}}" maxlength="6" placeholder="请输入验证码" title="验证码 ：" type="text" value="{{smsCode}}"></input>
+                </view>
+                <view class="button-small-wrap">
+                    <button bindtap="__e" class="{{[isSendCode?'btn-code-send':'btn-code']}}" data-event-opts="{{[ [ 'tap',[ [ 'login_GetCode',['$event'] ] ] ] ]}}" disabled="{{isSendCode}}" hoverClass="{{isSendCode?'':'btn-hover-clss'}}">{{isSendCode?second+'秒后重新发送':codeText}}</button>
+                </view>
+            </view>
+        </view>
+        <button bindtap="__e" class="btn-primary btn_info" data-event-opts="{{[ [ 'tap',[ [ 'changePhoneClick',['$event'] ] ] ] ]}}">确定</button>
+    </view>
+</view>

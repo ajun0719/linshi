@@ -1,0 +1,19 @@
+<view>
+    <view class="picker-view" wx:if="{{mode=='date'}}">
+        <picker bindchange="__e" data-event-opts="{{[ [ 'change',[ [ 'pickeronChange',['$event'] ] ] ] ]}}" data-pickStr="{{pickStr}}" disabled="{{disabled}}" mode="date">
+            <view class="pickerview">
+                <view class="{{['label',notNull?'notnull':'']}}">{{tipName+':'}}</view>
+                <view class="picker">{{dateTime?dateTime:'请选择'}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class="picker-view" wx:else>
+        <picker bindchange="__e" data-event-opts="{{[ [ 'change',[ [ 'pickeronChange',['$event'] ] ] ] ]}}" data-pickStr="{{pickStr}}" disabled="{{disabled}}" range="{{changeAry}}" rangeKey="{{itemKey}}" value="{{changeIndex}}">
+            <view class="pickerview">
+                <view class="{{['label',notNull?'notnull':'']}}">{{tipName+':'}}</view>
+                <view class="picker">{{pickerIndex!=-1?changeAry[pickerIndex][itemKey]:'请选择'}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class="divLine"></view>
+</view>

@@ -1,0 +1,49 @@
+<view class="{{[$root.g0==1?'h100vh':'']}}">
+    <view class="top">
+        <view class="search-left flex-wrp">
+            <view class="search-content">
+                <icon class="iconfont icon-search"></icon>
+                <input bindinput="__e" class="search-input" confirmType="搜索" data-event-opts="{{[ [ 'input',[ [ 'keyInput',['$event'] ] ] ] ]}}" maxlength="30" placeholder="请输入地址" placeholderClass="phcolor" style="font-size:30rpx;flex:1;margin-right:20rpx;"></input>
+                <button bindtap="__e" class="search-btn" data-event-opts="{{[ [ 'tap',[ [ 'searchKey',['$event'] ] ] ] ]}}" style="font-size:28rpx;width:130rpx;">搜索</button>
+            </view>
+        </view>
+    </view>
+    <view style="height:130rpx;" wx:if="{{$root.g1>0}}"></view>
+    <view class="list-main" wx:if="{{$root.g2>0}}">
+        <view class="group-item" data-index="{{index}}" wx:for="{{$root.l0}}" wx:key="index">
+            <f-r-blue-opening-door bind:__l="__l" bind:dingshi="__e" bind:updataCacheList="__e" bind:updataFR="__e" cd="{{item.g4}}" class="{{[item.g3==1?'h100b':'']}}" data-event-opts="{{[ [ '^updataFR',[ ['OnFRUpdata'] ] ],[ '^updataCacheList',[ ['OnFRUpdataList'] ] ],[ '^dingshi',[ ['OnDingShi'] ] ] ]}}" index="{{index}}" item="{{item[$orig]}}" style="width:100%;" vueId="{{'286a2bc2-1-'+index}}" wx:if="{{item[$orig].LockType===1}}"></f-r-blue-opening-door>
+            <block wx:else>
+                <y-z-blue-opening-door4 bind:__l="__l" bind:updataCacheList="__e" bind:updataFR="__e" cd="{{item.g6}}" class="{{[item.g5==1?'h100b':'']}}" data-event-opts="{{[ [ '^updataFR',[ ['OnFRUpdata'] ] ],[ '^updataCacheList',[ ['OnFRUpdataList'] ] ] ]}}" index="{{index}}" item="{{item[$orig]}}" vueId="{{'286a2bc2-2-'+index}}" wx:if="{{item[$orig].LockType===4}}"></y-z-blue-opening-door4>
+                <block wx:else>
+                    <yz-face-opening-door bind:__l="__l" bind:updataCacheList="__e" bind:updataFR="__e" cd="{{item.g8}}" class="{{[item.g7==1?'h100b':'']}}" data-event-opts="{{[ [ '^updataFR',[ ['OnFRUpdata'] ] ],[ '^updataCacheList',[ ['OnFRUpdataList'] ] ] ]}}" index="{{index}}" item="{{item[$orig]}}" style="width:100%;" vueId="{{'286a2bc2-3-'+index}}" wx:if="{{item[$orig].LockType===2||item[$orig].LockType==5}}"></yz-face-opening-door>
+                </block>
+            </block>
+            <yz-blue-opening-door6 bind:__l="__l" bind:dingshi="__e" bind:updataCacheList="__e" bind:updataFR="__e" cd="{{item.g10}}" class="{{[item.g9==1?'h100b':'']}}" data-event-opts="{{[ [ '^updataFR',[ ['OnFRUpdata'] ] ],[ '^updataCacheList',[ ['OnFRUpdataList'] ] ],[ '^dingshi',[ ['OnDingShi'] ] ] ]}}" index="{{index}}" item="{{item[$orig]}}" style="width:100%;" vueId="{{'286a2bc2-4-'+index}}" wx:if="{{item[$orig].LockType===6}}"></yz-blue-opening-door6>
+            <y-z-blue-face3 bind:__l="__l" bind:dingshi="__e" bind:updataCacheList="__e" bind:updataFR="__e" cd="{{item.g12}}" class="{{[item.g11==1?'h100b':'']}}" data-event-opts="{{[ [ '^updataFR',[ ['OnFRUpdata'] ] ],[ '^updataCacheList',[ ['OnFRUpdataList'] ] ],[ '^dingshi',[ ['OnDingShi'] ] ] ]}}" index="{{index}}" item="{{item[$orig]}}" style="width:100%;" vueId="{{'286a2bc2-5-'+index}}" wx:if="{{item[$orig].LockType==3}}"></y-z-blue-face3>
+        </view>
+    </view>
+    <view class="{{[userInfo.UserMob!=''&&userInfo.UserMob!=null?'no-data-view1':'no-data-view']}}" wx:if="{{$root.g13}}">
+        <view class="empower" wx:if="{{userInfo.UserMob==''||userInfo.UserMob==null}}">
+            <view class="empowertext">如需查询您的业务信息，</view>
+            <text class="empowertext">请<text bindtap="__e" class="empowerPhone" data-event-opts="{{[ [ 'tap',[ [ 'empowerPhone',['$event'] ] ] ] ]}}">授权手机号</text>进行关联。</text>
+        </view>
+        <view class="tishi1" wx:if="{{userInfo.UserMob!=''&&userInfo.UserMob!=null}}">
+            <view class="biaoti">暂未查询到相关开门权限，请按以下方法自助排查：</view>
+            <view class="TSxslr">
+                <view class="TSlr1">一、未在粤居码小程序进行租住登记。</view>
+                <view class="TSlr1" style="margin-top:10rpx;color:#333;font-weight:500;">解决方法：</view>
+                <view class="TSlr1" style="margin-top:10rpx;text-indent:70rpx;">微信扫一扫楼栋码进行登记，然后联系房东进行确认。<text bindtap="__e" class="yuejuma" data-event-opts="{{[ [ 'tap',[ [ 'onYJM',['$event'] ] ] ] ]}}">打开粤居码</text>
+                </view>
+                <view class="TSlr1">二、粤居码小程序登记注册的手机号与迈云通开门小程序登录的手机号码不同。</view>
+                <view class="TSlr1" style="margin-top:10rpx;color:#333;font-weight:500;">解决方法：</view>
+                <view class="TSlr1" style="margin-top:10rpx;text-indent:70rpx;">1、点击本页面上方手机号码，切换为粤居码登记注册的手机号码；</view>
+                <view class="TSlr1" style="margin-top:10rpx;text-indent:70rpx;">2、<text bindtap="__e" class="yuejuma" data-event-opts="{{[ [ 'tap',[ [ 'onYJM',['$event'] ] ] ] ]}}">打开粤居码小程序</text>，点击左上角个人姓名-个人信息-更换手机号码，修改为迈云通小程序登录的手机号码。</view>
+                <view class="TSlr1" style="margin-top:10rpx;text-indent:70rpx;">3、您也可以联系同住人帮忙查询临时密码，使用临时密码开门。</view>
+            </view>
+            <view bindtap="__e" class="DY" data-event-opts="{{[ [ 'tap',[ [ 'OnDY',['$event'] ] ] ] ]}}">订阅门禁申请通过通知</view>
+        </view>
+    </view>
+    <view class="loading_text" wx:if="{{NotFlag}}">没有更多数据了</view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

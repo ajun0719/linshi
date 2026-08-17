@@ -1,0 +1,8 @@
+<view class="nameInput-view">
+    <form bindsubmit="__e" data-event-opts="{{[ [ 'submit',[ [ 'formSubmit',['$event'] ] ] ] ]}}">
+        <input autofocus="{{true}}" bindinput="__e" class="nickname" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','userName','$event',[] ] ] ] ] ]}}" maxlength="10" name="nickname" placeholder="请输入您的昵称" type="nickname" value="{{userName}}"></input>
+        <view style="padding:20rpx;">
+            <button class="btn-primary" disabled="{{userName==''?true:false}}" formType="submit">保存</button>
+        </view>
+    </form>
+</view>

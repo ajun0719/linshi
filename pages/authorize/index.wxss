@@ -1,0 +1,41 @@
+page {
+    background: #fff
+}
+
+.userinfo {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.userinfo-avatar {
+    border-radius: 50%;
+    height: 150rpx;
+    margin: 20rpx;
+    width: 150rpx
+}
+
+.userinfo-nickname {
+    color: #444;
+    font-size: 35rpx
+}
+
+.usermotto {
+    color: #888787;
+    font-size: 25rpx;
+    margin-top: 50px
+}
+
+.authorize-view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 200rpx
+}

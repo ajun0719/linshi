@@ -1,0 +1,205 @@
+.codeBtn_login {
+    position: absolute;
+    right: 0;
+    top: -1ch
+}
+
+.ts_Login {
+    box-sizing: border-box;
+    color: #aaa;
+    font-family: "Fantasy";
+    font-size: 13px;
+    height: 100%;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    position: relative
+}
+
+.ts_Login,.userinfo {
+    -webkit-align-items: center;
+    align-items: center
+}
+
+.userinfo {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.userinfo-avatar {
+    border-radius: 50%;
+    height: 150rpx;
+    margin: 20rpx;
+    width: 150rpx
+}
+
+.userinfo-nickname {
+    color: #504f4f
+}
+
+.usermotto {
+    color: #aaa;
+    font-size: 28rpx;
+    margin-top: 60px
+}
+
+.login_class {
+    margin: 180rpx 20rpx 20rpx
+}
+
+.confirm {
+    margin: 100rpx
+}
+
+wx-text {
+    font-size: 28rpx
+}
+
+.input_phone_view {
+    border-bottom: 1px solid rgba(95,93,93,.15);
+    padding: 35rpx 10rpx
+}
+
+.input_code-view,.input_phone_view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.input_code-view {
+    padding: 30rpx 10rpx;
+    position: relative
+}
+
+.button-small-wrap {
+    position: absolute;
+    right: 30rpx
+}
+
+.btn-code-send {
+    background-color: silver
+}
+
+.btn-code,.btn-code-send {
+    color: #fff;
+    font-size: 25rpx
+}
+
+.btn-code {
+    background-color: #0081ff
+}
+
+.consent_agreement {
+    color: #b8b7b7;
+    font-size: 26rpx
+}
+
+.tip-view {
+    margin-left: 20rpx;
+    margin-top: 20rpx
+}
+
+.btn_info {
+    margin-top: 80rpx
+}
+
+.container-loading {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 200rpx
+}
+
+.container-loading,.logo_login {
+    display: -webkit-flex;
+    display: flex;
+    height: 100%
+}
+
+.logo_login {
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: 50rpx;
+    width: 100%
+}
+
+.logo-img {
+    height: 200rpx;
+    width: 200rpx
+}
+
+.sms-input {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 85%
+}
+
+.label {
+    color: #494747;
+    padding: 0 15rpx;
+    white-space: nowrap
+}
+
+.input-code,.label {
+    font-size: 25rpx
+}
+
+.input-view {
+    background: #fff;
+    border-radius: 20rpx
+}
+
+.divLine {
+    background: #e9eaec;
+    height: 0.5rpx;
+    width: 100%
+}
+
+.register_footer {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #706f6f;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 28rpx;
+    margin-bottom: 100rpx;
+    margin-left: 10rpx;
+    margin-top: 20rpx
+}
+
+.register_footer .xy {
+    color: #54adff
+}
+
+wx-checkbox .wx-checkbox-input {
+    height: 30rpx;
+    width: 30rpx
+}
+
+wx-checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #007aff
+}
+
+wx-checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    background: transparent;
+    color: #fff;
+    font-size: 20rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    text-align: center;
+    transform: translate(-50%,-50%) scale(1);
+    -webkit-transform: translate(-50%,-50%) scale(1);
+    width: 28rpx
+}

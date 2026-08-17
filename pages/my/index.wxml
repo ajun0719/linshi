@@ -1,0 +1,44 @@
+<view>
+    <view class="page">
+        <view class="userinfo">
+            <view>
+                <image backgroundSize="cover" class="userDefault_avatar" mode="aspectFill" src="/static/images/touxiang.png"></image>
+            </view>
+            <view bindtap="__e" class="info" data-event-opts="{{[ [ 'tap',[ [ 'updateAccount',['$event'] ] ] ] ]}}" wx:if="{{isLogin}}">
+                <view class="item-cf">
+                    <text class="userinfo-nickname">{{userInfo.NickName}}</text>
+                </view>
+                <text class="userinfo-phone">{{userInfo.UserMob}}</text>
+            </view>
+            <view bindtap="__e" class="info" data-event-opts="{{[ [ 'tap',[ [ 'updateAccount',['$event'] ] ] ] ]}}" wx:else>
+                <text class="userinfo-nickname">登录/注册</text>
+                <text class="userinfo-phone">发现更多精彩</text>
+            </view>
+            <view bindtap="__e" class="myqrcode" data-event-opts="{{[ [ 'tap',[ [ 'startMyPromoCode',['$event'] ] ] ] ]}}" wx:if="{{isLogin}}">
+                <icon class="iconfont icon-qrcode"></icon>
+                <text class="qrtext">我的凭证</text>
+            </view>
+        </view>
+        <view class="item-main">
+            <list-cell bind:__l="__l" bind:eventClick="__e" data-event-opts="{{[ [ '^eventClick',[ ['OnIntegral'] ] ] ]}}" icon="iconfont icon-jifen" iconColor="#ff8e12" otherColor="{{otherColor}}" otherTitle="{{integral}}" title="用户积分" vueId="4a180d5e-1"></list-cell>
+            <list-cell bind:__l="__l" bind:eventClick="__e" data-event-opts="{{[ [ '^eventClick',[ ['OnDefault'] ] ] ]}}" icon="iconfont icon-shouye-moren" iconColor="#999999" tips="{{textCount}}" title="默认界面" vueId="4a180d5e-2"></list-cell>
+            <list-cell bind:__l="__l" bind:eventClick="__e" data-event-opts="{{[ [ '^eventClick',[ ['Onscan'] ] ] ]}}" icon="iconfont icon-scan" iconColor="#1296db" tips="{{textCount}}" tipsColor="#ee3818" title="扫一扫" vueId="4a180d5e-3"></list-cell>
+            <view class="qiehuan" wx:if="{{unionid_Encrypt&&userID}}">
+                <button bindgetphonenumber="__e" class="qhanniu" data-event-opts="{{[ [ 'getphonenumber',[ [ 'getPhoneNumber',['$event'] ] ] ] ]}}" openType="getPhoneNumber" style="margin:0;width:100%;padding:0;background-color:#fff;border:1rpx solid #fff;">
+                    <view class="qhimg_title">
+                        <image class="image" src="/static/images/phoneqh.png"></image>
+                        <text class="title">切换手机</text>
+                    </view>
+                    <uni-icons bind:__l="__l" color="#8F8F94" size="15" type="right" vueId="4a180d5e-4"></uni-icons>
+                </button>
+            </view>
+            <view bindtap="__e" class="qiehuan" data-event-opts="{{[ [ 'tap',[ [ 'my_login',['$event'] ] ] ] ]}}" wx:else>
+                <view class="qhimg_title">
+                    <image class="image" src="/static/images/phoneqh.png"></image>
+                    <text class="title">切换手机</text>
+                </view>
+                <uni-icons bind:__l="__l" color="#8F8F94" size="15" type="right" vueId="4a180d5e-5"></uni-icons>
+            </view>
+        </view>
+    </view>
+</view>

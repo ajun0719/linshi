@@ -1,0 +1,9 @@
+<view class="lb-selector-picker lb-picker-item data-v-79c0fc00" style="{{'height:'+height+';'}}">
+    <picker-view bindchange="__e" class="data-v-79c0fc00" data-event-opts="{{[ [ 'change',[ [ 'handleChange',['$event'] ] ] ] ]}}" indicatorStyle="{{indicatorStyle}}" style="{{'height:'+height+';'}}" value="{{pickerValue}}">
+        <picker-view-column class="data-v-79c0fc00" wx:for="{{pickerColumns}}" wx:for-item="column" wx:key="index">
+            <view class="{{['data-v-79c0fc00','lb-picker-column',(item[props.value]||item)===selectValue[index]?'lb-picker-column-active':'']}}" wx:for="{{column||[]}}" wx:for-index="i" wx:key="i">
+                <text class="lb-picker-column-label data-v-79c0fc00">{{''+(item[props.label]||item)+''}}</text>
+            </view>
+        </picker-view-column>
+    </picker-view>
+</view>

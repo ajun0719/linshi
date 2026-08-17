@@ -1,0 +1,83 @@
+<view>
+    <view class="top">
+        <view class="search-left flex-wrp">
+            <view class="img-main">
+                <image bindtap="__e" class="img-top" data-event-opts="{{[ [ 'tap',[ [ 'prev',['$event'] ] ] ] ]}}" mode="aspectFit" src="{{topImgUrl}}"></image>
+            </view>
+            <view class="right">
+                <view class="search-content">
+                    <icon class="iconfont icon-search"></icon>
+                    <input bindconfirm="__e" bindinput="__e" class="search-input" confirmType="搜索" data-event-opts="{{[ [ 'input',[ [ 'keySearchInput',['$event'] ] ] ],[ 'confirm',[ [ 'searchService',['$event'] ] ] ] ]}}" maxlength="30" placeholder="请输入套餐标题搜索" placeholderClass="phcolor"></input>
+                    <button bindtap="__e" class="search-btn" data-event-opts="{{[ [ 'tap',[ [ 'searchService',['$event'] ] ] ] ]}}">搜索</button>
+                </view>
+                <view bindtap="__e" class="qr-tg" data-event-opts="{{[ [ 'tap',[ [ 'startNetQr',['$event'] ] ] ] ]}}">
+                    <text class="iconfont icon-qrcode1"></text>
+                    <text class="tgm">推广码</text>
+                </view>
+            </view>
+        </view>
+        <view class="tabTit tc">
+            <view bindtap="__e" class="{{[ 'flex1'+(!tab[index]?' active':'') ]}}" data-event-opts="{{[ [ 'tap',[ [ 'filterTab',['$event'] ] ] ] ]}}" data-index="{{index}}" wx:for="{{tabTxt}}" wx:key="index">
+                <text class="{{[!tab[index]?' active':'tabtext-tip']}}">{{item}}</text>
+                <text class="city-entry-arrow"></text>
+            </view>
+        </view>
+        <view catchtouchmove="myCatchTouch" class="tabLayer tc" hidden="{{tab[0]}}">
+            <scroll-view class="brand-scroll-view" scrollY="{{true}}">
+                <view bindtap="__e" class="{{[ 'brand-item '+(cmuId==item.id?'red':'') ]}}" data-brand="{{item}}" data-clickId="1" data-event-opts="{{[ [ 'tap',[ [ 'selectClick',['$event'] ] ] ] ]}}" data-index="{{index}}" wx:for="{{cmuObjArray}}" wx:key="index">
+                    <view>{{item.text}}</view>
+                </view>
+            </scroll-view>
+        </view>
+        <view catchtouchmove="myCatchTouch" class="tabLayer tc" hidden="{{tab[1]}}">
+            <scroll-view class="brand-scroll-view" scrollY="{{true}}">
+                <view bindtap="__e" class="{{[ 'brand-item '+(ispId==item.id?'red':'') ]}}" data-brand="{{item}}" data-clickId="2" data-event-opts="{{[ [ 'tap',[ [ 'selectClick',['$event'] ] ] ] ]}}" data-index="{{index}}" wx:for="{{ispObjArray}}" wx:key="index">
+                    <view>{{item.text}}</view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="list_class">
+        <view class="bhList" wx:for="{{businessHallList}}" wx:key="index">
+            <view class="item-bh">
+                <view class="bh-address">
+                    <text class="iconfont icon-address"></text>
+                    <view>{{item.Address}}</view>
+                </view>
+                <view class="bh-mob">
+                    <text class="iconfont icon-lxdh"></text>
+                    <view bindtap="__e" class="tel-view" data-event-opts="{{[ [ 'tap',[ [ 'callPhone',['$0'],[ [ ['businessHallList','',index],['Tel','',telIndex] ] ] ] ] ] ]}}" wx:for="{{item.Tel}}" wx:for-index="telIndex" wx:key="telIndex">
+                        <view style="margin-right:8rpx;">{{item}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="divLine" wx:if="{{index!=$root.g0-1}}"></view>
+        </view>
+        <view class="app-rent-house-list" wx:if="{{mealList!=null}}">
+            <view class="weui-panel">
+                <view class="weui-media-box" wx:for="{{mealList}}" wx:key="index">
+                    <view bindtap="__e" class="clicktop" data-event-opts="{{[ [ 'tap',[ [ 'onItemTap',['$event'] ] ] ] ]}}" data-index="{{index}}">
+                        <view class="service_img">
+                            <image mode="aspectFill" src="/static/images/item-service.png"></image>
+                        </view>
+                        <view class="rightContent">
+                            <view class="weui-media-box__bd">
+                                <view class="service_title">{{item.Title}}</view>
+                                <view class="service_desc">
+                                    <view class="service_content">{{item.Content}}</view>
+                                </view>
+                            </view>
+                            <view class="rightContent-bottom">
+                                <view class="ispName">{{item.OperatorName}}</view>
+                                <view class="text-price">{{item.Price+'元'}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="no-message-view" wx:if="{{$root.g1}}">
+            <view class="empityText">暂无数据</view>
+        </view>
+    </view>
+</view>

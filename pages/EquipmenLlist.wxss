@@ -1,0 +1,88 @@
+.list {
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 20rpx;
+    padding: 20rpx
+}
+
+.name_state {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 5rpx 0 15rpx
+}
+
+.name_state,.xian1 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.xian1 {
+    color: #1e90ff;
+    font-size: 30rpx
+}
+
+.xian1 .xian {
+    margin-left: 15rpx
+}
+
+.chong {
+    color: #333;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 30rpx
+}
+
+.chong .chong1 {
+    margin-left: 15rpx
+}
+
+.address_icon {
+    -webkit-align-items: center;
+    align-items: center;
+    border-top: 2rpx solid #d6d6d6;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.address_icon .address {
+    color: #c5c5c5;
+    font-size: 30rpx;
+    padding-top: 15rpx
+}
+
+.address_icon .icon {
+    color: #1e90ff;
+    font-size: 45rpx
+}
+
+.want {
+    bottom: 50rpx;
+    position: fixed;
+    width: 100%
+}
+
+.want,.want .buttom {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.want .buttom {
+    background-color: #1e90ff;
+    border-radius: 20rpx;
+    color: #fff;
+    padding: 30rpx 0;
+    width: 700rpx
+}

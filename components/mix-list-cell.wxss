@@ -1,0 +1,61 @@
+.icon .mix-list-cell.b-b:after {
+    border-bottom: 1px solid #e4e7ed;
+    left: 90rpx
+}
+
+.mix-list-cell {
+    -webkit-align-items: baseline;
+    align-items: baseline;
+    display: -webkit-flex;
+    display: flex;
+    line-height: 60rpx;
+    padding: 25rpx 30rpx;
+    position: relative
+}
+
+.mix-list-cell.cell-hover {
+    background: #fafafa
+}
+
+.mix-list-cell.b-b:after {
+    border-bottom: 1px solid #e4e7ed;
+    left: 20rpx;
+    right: 20rpx
+}
+
+.mix-list-cell .cell-icon {
+    -webkit-align-self: center;
+    align-self: center;
+    max-height: 100rpx;
+    width: 70rpx
+}
+
+.mix-list-cell .cell-more {
+    -webkit-align-self: center;
+    align-self: center;
+    border-right: 1rpx solid #8f8f94;
+    border-top: 1rpx solid #8f8f94;
+    font-size: 30rpx;
+    height: 16rpx;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 16rpx
+}
+
+.mix-list-cell .cell-tit {
+    color: #303133;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 30rpx;
+    margin-right: 10rpx
+}
+
+.mix-list-cell .cell-tip {
+    color: #909399;
+    font-size: 26rpx
+}
+
+.otherTitle {
+    color: #303133;
+    font-size: 30rpx
+}

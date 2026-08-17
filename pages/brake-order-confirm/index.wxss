@@ -1,0 +1,80 @@
+.main {
+    margin-bottom: 100rpx
+}
+
+.goods-list {
+    margin-bottom: 10rpx;
+    margin-top: 20rpx;
+    padding-bottom: 10rpx
+}
+
+.goods-list,.list-title {
+    background: #fff;
+    width: 100%
+}
+
+.list-title {
+    color: #000;
+    font-size: 30rpx;
+    padding: 20rpx 0 20rpx 10rpx
+}
+
+.listTop {
+    -webkit-align-items: center;
+    align-items: center
+}
+
+.listTop,.orderPrice {
+    display: -webkit-flex;
+    display: flex
+}
+
+.orderPrice {
+    color: #5a5858;
+    font-size: 28rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 15rpx 10rpx 15rpx 0
+}
+
+.textRedValue {
+    color: #fa1111
+}
+
+.bottom {
+    background: #fff;
+    border-top: 1px solid #ebe9e9;
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 24rpx;
+    height: 90rpx;
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+.pay-btn {
+    margin-top: 100rpx;
+    padding: 20rpx
+}
+
+.textRedValue,.ybcTip {
+    font-size: 16px
+}
+
+.ybcTip {
+    color: #fc872d;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-left: 12rpx;
+    padding: 30rpx 0
+}
+
+.icon-tip {
+    color: #e41f19;
+    font-size: 40rpx;
+    margin-right: 10rpx
+}

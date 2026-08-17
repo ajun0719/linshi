@@ -1,0 +1,63 @@
+.home_top {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #1e90ff;
+    display: -webkit-flex;
+    display: flex;
+    line-height: 90rpx;
+    position: relative;
+    width: 100%
+}
+
+.img-scan {
+    float: left;
+    height: 75rpx;
+    margin-left: 20rpx;
+    width: 75rpx
+}
+
+.userDefault_avatar,.userinfo-avatar {
+    height: 120rpx;
+    margin-right: 20rpx;
+    right: 0rpx;
+    top: 0;
+    width: 120rpx
+}
+
+.userDefault_avatar wx-image,.userinfo-avatar wx-image {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%
+}
+
+.text_location,.text_location1 {
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 700;
+    margin-right: 5rpx
+}
+
+.loacation-view {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 300rpx
+}
+
+.iconfont,.loacation-view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.iconfont {
+    color: #fff;
+    font-size: 28rpx;
+    margin-left: 5rpx
+}
+
+.shouji {
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 600
+}

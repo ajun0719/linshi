@@ -1,0 +1,145 @@
+.page {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden
+}
+
+.address-view,.person-message,.personCard-img {
+    background: #fff;
+    border-radius: 30rpx;
+    margin: 20rpx 10rpx;
+    padding: 10rpx
+}
+
+.number-choose {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 100rpx;
+    padding: 20rpx 0 20rpx 16rpx;
+    width: 100%
+}
+
+.number-choose .label {
+    white-space: nowrap
+}
+
+.number-choose .sear-input {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-left: 30rpx;
+    position: absolute;
+    right: 10rpx
+}
+
+.number-choose .sear-input .peo-sear {
+    font-size: 26rpx
+}
+
+.number-choose .sear-input .keyIpu {
+    color: #495060;
+    font-size: 16px;
+    height: 60rpx;
+    text-align: center
+}
+
+.number-choose .sear-input .btn-search {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #05f;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 22rpx;
+    height: 50rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100rpx
+}
+
+.selected-choose {
+    left: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    right: 0
+}
+
+.label {
+    color: #495060;
+    font-size: 16px
+}
+
+.pickerview {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 6px 14rpx 6px 0
+}
+
+.picker-init,.text-name,wx-picker {
+    color: #495060;
+    font-size: 16px;
+    margin-left: 14rpx
+}
+
+.confirm-sumbit-view {
+    padding: 30rpx
+}
+
+.img-add {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #555;
+    color: #fff;
+    height: 200rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding-left: 10rpx;
+    width: 220rpx
+}
+
+.img-add,.imgChoose {
+    display: -webkit-flex;
+    display: flex
+}
+
+.imgChoose {
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.titleTip {
+    color: #3a3a3a;
+    font-size: 30rpx;
+    font-weight: 700;
+    margin-top: 20rpx;
+    padding: 30rpx 0 30rpx 10rpx
+}
+
+.gallery {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 20rpx 0rpx;
+    width: 48%
+}
+
+.picker-lb {
+    z-index: 999
+}
+
+.noborder::after {
+    border: none!important
+}

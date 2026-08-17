@@ -1,0 +1,145 @@
+.main-list .cell {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10rpx;
+    box-shadow: 0 0 20rpx 5rpx #eee;
+    display: -webkit-flex;
+    display: flex;
+    margin: 20rpx auto;
+    padding: 20rpx;
+    position: relative;
+    width: 96%
+}
+
+.main-list .cell .cell__hd {
+    font-size: 0;
+    height: 260rpx;
+    width: 100%
+}
+
+.main-list .cell .cell__hd wx-image {
+    border: 1rpx solid #e4e7ed;
+    border-radius: 10rpx;
+    height: 260rpx;
+    width: 100%;
+    will-change: transform
+}
+
+.main-list .cell .eventStatus {
+    background: #cd2626;
+    color: #fff;
+    font-size: 23rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    position: absolute;
+    right: 10rpx;
+    text-align: center;
+    width: 100rpx
+}
+
+.main-list .cell .cacenl {
+    background: #838383
+}
+
+.main-list .cell .complete {
+    background: #19be6b
+}
+
+.main-list .cell .handling {
+    background: #05f
+}
+
+.main-list .cell .cell__bd .address,.main-list .cell .cell__bd .des,.main-list .cell .cell__bd .time {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all
+}
+
+.main-list .cell .cell__bd .address {
+    font-size: 34rpx;
+    font-weight: 600;
+    margin: 20rpx 0;
+    padding-right: 20rpx
+}
+
+.main-list .cell .cell__bd .des {
+    color: #666;
+    font-size: 28rpx;
+    margin-bottom: 12rpx
+}
+
+.main-list .cell .cell__bd .time {
+    -webkit-line-clamp: 1;
+    color: #777;
+    font-size: 24rpx
+}
+
+.add-view {
+    background: #3370ff;
+    border-radius: 50%;
+    bottom: 80rpx;
+    box-shadow: 0 0 10rpx 5rpx #d0d0d0;
+    height: 110rpx;
+    line-height: 110rpx;
+    position: fixed;
+    right: 40rpx;
+    text-align: center;
+    width: 110rpx
+}
+
+.loginbtn {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #de2929;
+    border-radius: 15rpx;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    height: 70rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 280rpx
+}
+
+.icon-add {
+    color: #fff;
+    font-size: 50rpx
+}
+
+.no-data-view {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 50%
+}
+
+.empower,.no-data-view {
+    color: #9c9d9e;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx
+}
+
+.empower {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-top: 20rpx;
+    text-align: center
+}
+
+.empower .empowertext {
+    display: -webkit-flex;
+    display: flex;
+    margin: 10rpx 0
+}
+
+.empower .empowerPhone {
+    color: #32a9f8;
+    text-decoration: underline
+}

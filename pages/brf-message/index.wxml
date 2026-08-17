@@ -1,0 +1,51 @@
+<view class="data-v-41bf1449">
+    <view class="main-content data-v-41bf1449">
+        <view class="item-build data-v-41bf1449" wx:if="{{brfId}}">
+            <view class="title _p data-v-41bf1449">处理进度</view>
+            <i-input bind:__l="__l" class="data-v-41bf1449" disabled="{{true}}" isRedValue="1" right="{{true}}" title="处理状态:" type="text" value="{{brfData.HandleStatusLable}}" vueId="1f97b59c-1"></i-input>
+            <i-input bind:__l="__l" class="data-v-41bf1449" disabled="{{true}}" right="{{true}}" title="创建时间:" type="text" value="{{brfData.CreateTime}}" vueId="1f97b59c-2"></i-input>
+            <i-input bind:__l="__l" class="data-v-41bf1449" disabled="{{true}}" right="{{true}}" title="完成时间:" type="text" value="{{brfData.CompletedTime}}" vueId="1f97b59c-3" wx:if="{{brfData.CompletedTime}}"></i-input>
+            <i-input bind:__l="__l" class="data-v-41bf1449" disabled="{{true}}" right="{{true}}" title="处理人:" type="text" value="{{brfData.Handler}}" vueId="1f97b59c-4" wx:if="{{brfData.Handler}}"></i-input>
+            <i-input bind:__l="__l" class="data-v-41bf1449" disabled="{{true}}" right="{{true}}" title="处理结果:" type="text" value="{{brfData.HandleContent}}" vueId="1f97b59c-5" wx:if="{{brfData.HandleContent}}"></i-input>
+        </view>
+        <view class="item-build data-v-41bf1449">
+            <view class="title tip _p data-v-41bf1449">基本信息</view>
+            <fxd-picker bind:__l="__l" bind:pickerchange="__e" changeAry="{{cmuAry.list}}" changeIndex="{{cmuAry.index}}" class="data-v-41bf1449" data-event-opts="{{[ [ '^pickerchange',[ ['pickerchange'] ] ] ]}}" disabled="{{brfData.HandleStatus>0}}" notNull="true" pickStr="CommunityID" tipName="所属社区" vueId="1f97b59c-6"></fxd-picker>
+            <view class="picker-view data-v-41bf1449" wx:if="{{brfData.CommunityID}}">
+                <picker bindchange="__e" class="data-v-41bf1449" data-event-opts="{{[ [ 'change',[ [ 'operPicker',['$event'] ] ] ] ]}}" disabled="{{brfData.HandleStatus>0}}" range="{{operatorsAry.list}}" rangeKey="text" value="{{operatorsAry.index}}">
+                    <view class="pickerview data-v-41bf1449">
+                        <view class="label notnull data-v-41bf1449">运营商:</view>
+                        <view class="picker data-v-41bf1449">{{operatorsAry.index!=-1?operatorsAry.list[operatorsAry.index]['text']:'请选择'}}</view>
+                    </view>
+                </picker>
+            </view>
+            <view class="divLine data-v-41bf1449"></view>
+            <i-input bind:__l="__l" bind:change="__e" class="data-v-41bf1449" data-event-opts="{{[ [ '^change',[ ['inputChange'] ] ] ]}}" disabled="{{brfData.HandleStatus>0}}" isNotNull="true" placeholder="请填写报障地址" right="{{true}}" strName="addressAll" title="报障地址:" type="textarea" value="{{brfData.AddressAll}}" vueId="1f97b59c-7"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" class="data-v-41bf1449" data-event-opts="{{[ [ '^change',[ ['inputChange'] ] ] ]}}" disabled="{{brfData.HandleStatus>0}}" isNotNull="true" placeholder="请填写机主姓名" right="{{true}}" strName="cusName" title="机主姓名:" type="text" value="{{brfData.CusName}}" vueId="1f97b59c-8"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" class="data-v-41bf1449" data-event-opts="{{[ [ '^change',[ ['inputChange'] ] ] ]}}" disabled="{{brfData.HandleStatus>0}}" placeholder="请填写联系电话" right="{{true}}" strName="cusMob" title="联系电话:" type="number" value="{{brfData.CusMob}}" vueId="1f97b59c-9"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" class="data-v-41bf1449" data-event-opts="{{[ [ '^change',[ ['inputChange'] ] ] ]}}" disabled="{{brfData.HandleStatus>0}}" placeholder="请填写身份证号" right="{{true}}" strName="cusPaperNum" title="身份证号:" type="text" value="{{brfData.CusPaperNum}}" vueId="1f97b59c-10"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" class="data-v-41bf1449" data-event-opts="{{[ [ '^change',[ ['inputChange'] ] ] ]}}" disabled="{{brfData.HandleStatus>0}}" placeholder="请填写宽带帐号" right="{{true}}" strName="wbAccount" title="宽带帐号:" type="text" value="{{brfData.WbAccount}}" vueId="1f97b59c-11"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" class="data-v-41bf1449" data-event-opts="{{[ [ '^change',[ ['inputChange'] ] ] ]}}" disabled="{{brfData.HandleStatus>0}}" isNotNull="true" placeholder="请填写描述" right="{{true}}" strName="desc" title="故障描述:" type="text" value="{{brfData.Describe}}" vueId="1f97b59c-12"></i-input>
+        </view>
+        <view class="item-build data-v-41bf1449">
+            <view class="title data-v-41bf1449">故障问题:</view>
+            <view class="example-body data-v-41bf1449">
+                <uni-tag bind:__l="__l" bind:click="__e" class="tag-view data-v-41bf1449" data-event-opts="{{[ [ '^click',[ [ 'onOneChange',[index,'$0'],[ [ ['tagsAry','',index,'id'] ] ] ] ] ] ]}}" data-index="{{item.text}}" disabled="{{brfData.HandleStatus>0}}" inverted="{{item.selected=='false'}}" text="{{item.text}}" type="primary" vueId="{{'1f97b59c-13-'+index}}" wx:for="{{tagsAry}}" wx:key="index"></uni-tag>
+            </view>
+        </view>
+        <view class="item-build data-v-41bf1449">
+            <view class="title data-v-41bf1449">相关图片</view>
+            <view class="gallery data-v-41bf1449">
+                <view class="item data-v-41bf1449" wx:for="{{brfImgList}}" wx:key="index">
+                    <image bindtap="__e" class="item-img data-v-41bf1449" data-event-opts="{{[ [ 'tap',[ [ 'previewImage',['$event'] ] ] ] ]}}" data-src="{{item}}" data-type="1" mode="aspectFill" src="{{item}}"></image>
+                    <image bindtap="__e" class="delete data-v-41bf1449" data-event-opts="{{[ [ 'tap',[ [ 'deleteFun',['$event'] ] ] ] ]}}" data-index="{{index}}" data-type="1" src="/static/images/img_delete.svg" wx:if="{{brfData.HandleStatus<=0}}"></image>
+                </view>
+                <image bindtap="__e" class="add-img data-v-41bf1449" data-event-opts="{{[ [ 'tap',[ [ 'uploadaccessImg',[1] ] ] ] ]}}" mode="aspectFit" src="/static/images/add_pic.png" wx:if="{{brfImgAdd&&brfData.HandleStatus<=0}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="btn data-v-41bf1449">
+        <button bindtap="__e" class="btn-primary data-v-41bf1449" data-event-opts="{{[ [ 'tap',[ [ 'saveClick',['$event'] ] ] ] ]}}" wx:if="{{brfData.HandleStatus<=0}}">{{brfId?'修改':'添加'}}</button>
+        <button bindtap="__e" class="btn-primary redbtn data-v-41bf1449" data-event-opts="{{[ [ 'tap',[ [ 'cancelClick',['$event'] ] ] ] ]}}" wx:if="{{brfData.HandleStatus==0}}">撤销</button>
+    </view>
+</view>

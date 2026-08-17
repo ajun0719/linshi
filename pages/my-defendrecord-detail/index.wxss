@@ -1,0 +1,102 @@
+.access-barrier-view {
+    height: 100%;
+    width: 100%
+}
+
+.acc-img,.access-barrier-message,.person-message,.tag-view {
+    background: #fff;
+    margin: 20rpx 0
+}
+
+.am-panel>wx-view:first-child {
+    color: #636060;
+    font-size: 32rpx;
+    font-weight: 700;
+    padding-left: 10rpx
+}
+
+.amfb-panel>wx-view:first-child {
+    color: #495060;
+    font-size: 28rpx;
+    font-weight: 700;
+    padding-left: 10rpx
+}
+
+.confirm-sumbit-view {
+    padding: 30rpx
+}
+
+.tag-view2 {
+    background: #fff;
+    padding: 10px 0rpx;
+    width: 100%
+}
+
+.tag-view,.tag-view2 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.tag-view {
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 10rpx 15rpx
+}
+
+.example-page {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding: 20rpx
+}
+
+.one-tag {
+    padding: 10rpx;
+    white-space: nowrap
+}
+
+.one-tag,.text-name {
+    color: #495060;
+    font-size: 14px
+}
+
+.text-name {
+    margin-left: 15rpx
+}
+
+.acc-img {
+    margin-top: 20rpx
+}
+
+.item-normalText {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    border-bottom: .5px #e9eaec;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 16px 0rpx;
+    position: relative
+}
+
+.textRedValue {
+    color: #e72727
+}
+
+.textRedValue,.textValue {
+    font-size: 16px;
+    padding-right: 16rpx
+}
+
+.textValue {
+    color: #495060
+}

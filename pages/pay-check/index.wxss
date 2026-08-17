@@ -1,0 +1,133 @@
+.codeBtn_login {
+    position: absolute;
+    right: 0;
+    top: -1ch
+}
+
+.ts_Login {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: #aaa;
+    font-family: "Fantasy";
+    font-size: 13px;
+    height: 100%;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    position: relative
+}
+
+.login_class {
+    margin: 100rpx 20rpx 20rpx
+}
+
+.confirm {
+    margin: 100rpx
+}
+
+wx-text {
+    font-size: 28rpx
+}
+
+.input_phone_view {
+    border-bottom: 1px solid rgba(95,93,93,.15);
+    padding: 35rpx 10rpx
+}
+
+.input_code-view,.input_phone_view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.input_code-view {
+    padding: 30rpx 10rpx;
+    position: relative
+}
+
+.button-small-wrap {
+    position: absolute;
+    right: 30rpx
+}
+
+.btn-code-send {
+    background-color: silver
+}
+
+.btn-code,.btn-code-send {
+    color: #fff;
+    font-size: 25rpx
+}
+
+.btn-code {
+    background-color: #0081ff
+}
+
+.consent_agreement {
+    color: #b8b7b7;
+    font-size: 26rpx
+}
+
+.tip-view {
+    margin-bottom: 100rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx
+}
+
+.btn_info {
+    margin-top: 100rpx!important
+}
+
+.tv_input_phone {
+    font-size: 29rpx
+}
+
+.container-loading {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 200rpx
+}
+
+.container-loading,.logo_login {
+    display: -webkit-flex;
+    display: flex;
+    height: 100%
+}
+
+.logo_login {
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: 50rpx;
+    width: 100%
+}
+
+.sms-input {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 85%
+}
+
+.label {
+    color: #494747;
+    padding: 0 15rpx;
+    white-space: nowrap
+}
+
+.input-code,.label {
+    font-size: 25rpx
+}
+
+.input-view {
+    background: #fff;
+    border-radius: 20rpx
+}

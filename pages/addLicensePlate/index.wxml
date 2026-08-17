@@ -1,0 +1,40 @@
+<view class="addLicensePlate">
+    <view class="numBox">
+        <view class="ordinary" wx:if="{{!isDefault}}">
+            <view class="whiteBorder">
+                <view class="nums">
+                    <text class="{{[ 'item '+(index===idx?'active':'') ]}}" wx:for="{{numLen}}" wx:key="index">{{result[index]}}</text>
+                    <text class="point"></text>
+                    <text class="tlPoint"></text>
+                    <text class="trPoint"></text>
+                    <text class="blPoint"></text>
+                    <text class="brPoint"></text>
+                </view>
+            </view>
+        </view>
+        <view class="newEnergy" wx:else>
+            <view class="whiteBorder">
+                <view class="nums">
+                    <text class="{{[ 'item '+(index===idx?'active':'') ]}}" wx:for="{{numLen}}" wx:key="index">{{result[index]}}</text>
+                    <view class="point"></view>
+                    <text class="tlPoint"></text>
+                    <text class="trPoint"></text>
+                    <text class="blPoint"></text>
+                    <text class="brPoint"></text>
+                </view>
+            </view>
+        </view>
+        <view class="toggle">
+            <checkbox-group bindchange="__e" data-event-opts="{{[ [ 'change',[ [ 'checkboxChange',['$event'] ] ] ] ]}}">
+                <label class="checkbox">
+                    <checkbox checked="{{isDefault}}" value="1"></checkbox>新能源车牌</label>
+            </checkbox-group>
+        </view>
+    </view>
+    <view class="confirm-sumbit-view">
+        <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'confirmClick',['$event'] ] ] ] ]}}" disabled="{{isCanPay}}">确认</button>
+    </view>
+    <view class="keyboard">
+        <soft-keyboard bind:__l="__l" bind:handleDeleteClick="__e" bind:handleToggleClick="__e" bind:handlekeyClick="__e" data-event-opts="{{[ [ '^handlekeyClick',[ ['handleKeyClickFun'] ] ],[ '^handleDeleteClick',[ ['handleDeleteClickFun'] ] ],[ '^handleToggleClick',[ ['handleToggleClickFun'] ] ] ]}}" isCityKeyboard="{{isCityKeyboard}}" vueId="627c13d4-1"></soft-keyboard>
+    </view>
+</view>

@@ -1,0 +1,111 @@
+<view>
+    <view class="xzfd-top">
+        <image src="https://ent.ximatech.cn:100//UploadImages/PAArticle/2021-09-10/74698a40823f407c85b2b4b7e2c954f1.jpg"></image>
+        <image bindtap="__e" class="code_btn" data-event-opts="{{[ [ 'tap',[ ['goCode'] ] ] ]}}" mode="widthFix" src="../../static/code.png"></image>
+    </view>
+    <view class="item-zy">
+        <view class="item-zy-child">
+            <view class="right" style="margin-left:0;">
+                <view bindtap="__e" class="item-zk" data-event-opts="{{[ [ 'tap',[ ['goHousingList'] ] ] ]}}" style="background-color:#23a0ff;">
+                    <view class="text-fy">
+                        <text class="text-title">我的房屋</text>
+                        <text class="text-des" style="font-size:36rpx;">办理/注销门禁</text>
+                    </view>
+                    <image class="img-item" mode="aspectFit" src="../../static/images/fangwu.png"></image>
+                </view>
+                <view bindtap="__e" class="item-sq" data-event-opts="{{[ [ 'tap',[ [ 'goRentList',['$event'] ] ] ] ]}}">
+                    <view class="text-fy">
+                        <text class="text-title">住户信息</text>
+                        <text class="text-des">查看住户信息</text>
+                    </view>
+                    <image class="img-item" mode="aspectFit" src="../../static/images/zkgl.png"></image>
+                </view>
+            </view>
+            <view class="right">
+                <view bindtap="__e" class="item-zk" data-event-opts="{{[ [ 'tap',[ ['TZYJM'] ] ] ]}}" style="background-color:#71d63a;">
+                    <view class="text-fy">
+                        <text class="text-title">入住审批</text>
+                        <text class="text-des">进入粤居码审批</text>
+                    </view>
+                    <image class="img-item" mode="aspectFit" src="../../static/images/yjm.png" style="margin-left:2rpx;border-radius:50%;"></image>
+                </view>
+                <view bindtap="__e" class="item-sq" data-event-opts="{{[ [ 'tap',[ ['goContractList'] ] ] ]}}" style="background-color:#9575ff;">
+                    <view class="text-fy">
+                        <text class="text-title">租约合同</text>
+                        <text class="text-des">查看租约合同</text>
+                    </view>
+                    <image class="img-item" mode="aspectFit" src="../../static/images/zuyue.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="__e" class="item-main" data-event-opts="{{[ [ 'tap',[ [ 'OnIVideo',['$event'] ] ] ] ]}}">
+        <view class="qiehuan">
+            <view class="qhimg_title">
+                <image class="image" src="/static/images/jiaocheng.png"></image>
+                <text class="title">图文教程</text>
+            </view>
+            <uni-icons bind:__l="__l" color="#8F8F94" size="20" type="right" vueId="772b26e6-1"></uni-icons>
+        </view>
+    </view>
+    <view class="fixed-container">
+        <view>
+            <view class="fixed-head1">
+                <view class="fixed-head-left">
+                    <text class="fixed-main-title">{{itemcontainer7.banner.title}}</text>
+                </view>
+                <view cashList="{{true}}" class="fixed-head-right" wx:if="{{itemcontainer7.banner.subtitle===undefined}}">
+                    <text class="fixed-link">{{banner.link}}</text>
+                </view>
+            </view>
+            <view class="fixed-list7">
+                <view bindtap="__e" class="fixed-product3" data-event-opts="{{[ [ 'tap',[ [ 'navClick',['$0'],[ [ ['itemcontainer7.data','',index,'url'] ] ] ] ] ] ]}}" style="padding-top:20rpx;padding-bottom:20rpx;width:220rpx;" wx:for="{{itemcontainer7.data}}" wx:key="index">
+                    <image class="fixed-image3" src="{{item.Img}}" style="width:80rpx;height:90rpx;"></image>
+                    <view class="fixed-title">{{item.title}}</view>
+                </view>
+            </view>
+        </view>
+        <view style="margin-top:20rpx;">
+            <view class="fixed-head1">
+                <view class="fixed-head-left">
+                    <text class="fixed-main-title">{{itemcontainer6.banner.title}}</text>
+                </view>
+                <view cashList="{{true}}" class="fixed-head-right" wx:if="{{itemcontainer6.banner.subtitle===undefined}}">
+                    <text class="fixed-link">{{banner.link}}</text>
+                </view>
+            </view>
+            <view class="fixed-list m_t_20">
+                <view bindtap="__e" class="{{['fixed-product2',index>0?'maleft_20':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navClick',['$0'],[ [ ['itemcontainer6.data','',index,'url'] ] ] ] ] ] ]}}" wx:for="{{itemcontainer6.data}}" wx:key="index">
+                    <view class="iconfont icon-dianbiao_shiti dianbiao tuibiao" wx:if="{{index==0}}"></view>
+                    <view class="iconfont icon-shuibiao_shiti shubiao tuibiao" wx:if="{{index==1}}"></view>
+                    <view class="fixed-title1">{{item.title}}</view>
+                </view>
+            </view>
+        </view>
+        <view style="margin-top:20rpx;">
+            <view class="fixed-head1">
+                <view class="fixed-head-left">
+                    <text class="fixed-main-title">{{itemcontainer2.banner.title}}</text>
+                </view>
+                <view cashList="{{true}}" class="fixed-head-right" wx:if="{{itemcontainer2.banner.subtitle===undefined}}">
+                    <text class="fixed-link">{{banner.link}}</text>
+                </view>
+            </view>
+            <view class="fixed-head2" wx:if="{{itemcontainer2.banner.subtitle!==undefined}}">
+                <view class="fixed-head-left">
+                    <text class="fixed-sub-title">{{itemcontainer2.banner.subtitle}}</text>
+                </view>
+                <view cashList="{{true}}" class="fixed-head-right">
+                    <text class="fixed-link">{{itemcontainer2.banner.link}}</text>
+                </view>
+            </view>
+            <view class="fixed-list">
+                <view bindtap="__e" class="{{['fixed-product3',index>0?'maleft_20':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navClick',['$0'],[ [ ['itemcontainer2.data1','',index,'url'] ] ] ] ] ] ]}}" wx:for="{{itemcontainer2.data1}}" wx:key="index">
+                    <image class="fixed-image3" src="{{item.uri}}"></image>
+                    <view class="fixed-title">{{item.title}}</view>
+                    <view class="fixed-subtitle">{{item.subtitle}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

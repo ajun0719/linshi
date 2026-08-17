@@ -1,0 +1,4 @@
+<view style="background:#FFFFFF;">
+    <list-cell bind:__l="__l" bind:eventClick="__e" data-event-opts="{{[ [ '^eventClick',[ ['startMyRecord'] ] ] ]}}" title="我的报障单" vueId="c4a6a756-1"></list-cell>
+    <list-cell bind:__l="__l" bind:eventClick="__e" data-event-opts="{{[ [ '^eventClick',[ ['startMyDefendRecord'] ] ] ]}}" title="维护故障单" vueId="c4a6a756-2"></list-cell>
+</view>

@@ -1,0 +1,35 @@
+.main {
+    height: 100vh;
+    margin-top: 20vh
+}
+
+.icon-result-success {
+    color: #19be6b;
+    font-size: 80rpx
+}
+
+.tv_main {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align-last: center
+}
+
+.tv_result {
+    color: #19be6b;
+    font-size: 35rpx;
+    font-weight: 800;
+    margin-top: 10rpx
+}
+
+.pay-btn {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    margin-top: 100rpx;
+    padding: 20rpx
+}

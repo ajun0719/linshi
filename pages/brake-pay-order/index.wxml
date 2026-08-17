@@ -1,0 +1,37 @@
+<view>
+    <view class="main">
+        <view class="order-list-page">
+            <view class="order-item" wx:for="{{orderList}}" wx:key="index">
+                <view data-postition="{{index}}">
+                    <view class="itemTop">
+                        <navigator class="order-title line-ellipsis" hoverClass="none">
+                            <view>{{item.ParkingName}}</view>
+                            <view class="triangle"></view>
+                        </navigator>
+                        <view class="orderStatus">{{item.TranStatusText}}</view>
+                    </view>
+                    <view class="order-info" data-order="{{item}}">
+                        <view class="iconfont" style="font-size:128rpx;color:#6bc0e8;"></view>
+                        <view class="order-desc">
+                            <view class="nameclass">
+                                <view class="movie-name line-ellipsis">{{'支付类型： '+item.PayTypeText}}</view>
+                                <view class="movie-name line-ellipsis" wx:if="{{item.PayTime}}">{{'支付时间： '+item.PayTime}}</view>
+                                <view class="movie-name line-ellipsis" wx:else>{{'创建时间： '+item.CreateTime}}</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="order-more">
+                        <view>{{'缴费金额：¥ '+item.Price+'元'}}</view>
+                    </view>
+                </view>
+                <view class="coent_list" wx:if="{{item.IsPay==0}}">
+                    <button bindtap="__e" class="cancel-btn" data-event-opts="{{[ [ 'tap',[ [ 'cancelOrder',['$event'] ] ] ] ]}}" data-index="{{index}}" wx:if="{{item.IsPay==0}}">取消订单</button>
+                    <button bindtap="__e" class="pay-btn" data-event-opts="{{[ [ 'tap',[ [ 'payGGLOrder',['$event'] ] ] ] ]}}" data-index="{{index}}" wx:if="{{item.IsPay==0}}">立即付款</button>
+                </view>
+            </view>
+        </view>
+        <view class="no-data-view" wx:if="{{$root.g0}}">
+            <view class="empityText">暂无数据</view>
+        </view>
+    </view>
+</view>

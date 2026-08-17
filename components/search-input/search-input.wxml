@@ -1,0 +1,10 @@
+<view class="content data-v-5b867469">
+    <view class="search-bar data-v-5b867469">
+        <input bindinput="__e" class="search-bar__input data-v-5b867469" data-event-opts="{{[ [ 'input',[ [ 'inputTyping',['$event'] ] ] ] ]}}" placeholder="请输入银行" type="text" value="{{inputVal}}"></input>
+        <scroll-view class="scroll-view data-v-5b867469" scrollY="{{true}}" wx:if="{{viewShowed}}">
+            <view class="msg-item data-v-5b867469" wx:for="{{resultList}}" wx:key="index">
+                <view bindtap="__e" class="user-name data-v-5b867469" data-event-opts="{{[ [ 'tap',[ [ 'name',['$event'] ] ] ] ]}}" data-index="{{index}}">{{item.text}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

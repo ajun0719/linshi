@@ -1,0 +1,21 @@
+<view>
+    <view class="account-update-view">
+        <view class="my-item-headImg">
+            <view class="label">头像:</view>
+            <view class="youxiangjiangtu">
+                <view>
+                    <image backgroundSize="cover" class="userDefault_avatar" mode="aspectFill" src="/static/images/touxiang.png"></image>
+                </view>
+                <view class="with_arrow"></view>
+            </view>
+        </view>
+        <view class="divLine"></view>
+        <view bindtap="__e" class="my-item-username" data-event-opts="{{[ [ 'tap',[ [ 'updateUserName',['$event'] ] ] ] ]}}">
+            <view class="label">昵称:</view>
+            <view class="youxiangjiangtu">
+                <text class="userName">{{userInfo.NickName}}</text>
+                <view class="with_arrow"></view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+<view>
+    <view class="address-choose" wx:if="{{countyID!=789456123}}">
+        <picker bindchange="__e" data-event-opts="{{[ [ 'change',[ [ 'areaPickerChange',['$event'] ] ] ] ]}}" disabled="{{disArea}}" range="{{areaArray}}" value="{{areaIndex}}">
+            <view class="pickerview">
+                <view class="label notnull" wx:if="{{isGroupType==1}}">维护区/县:</view>
+                <view class="label notnull" wx:if="{{isGroupType==2}}">区/县:</view>
+                <view class="label notnull" wx:if="{{isGroupType==3}}">报装区/县:</view>
+                <view class="picker" wx:if="{{areaIndex!=''}}">{{areaArray[areaIndex]}}</view>
+                <view class="picker-init" wx:else>请选择</view>
+            </view>
+        </picker>
+    </view>
+    <view class="divLine" wx:if="{{countyID!=789456123}}"></view>
+    <view class="address-choose" wx:if="{{countyID!=-1}}">
+        <picker bindchange="__e" data-event-opts="{{[ [ 'change',[ [ 'townPickerChange',['$event'] ] ] ] ]}}" disabled="{{disTown}}" range="{{townArray}}" value="{{townIndex}}">
+            <view class="pickerview">
+                <view class="label notnull" wx:if="{{isGroupType==1}}">维护街镇:</view>
+                <view class="label notnull" wx:if="{{isGroupType==2}}">街镇:</view>
+                <view class="label notnull" wx:if="{{isGroupType==3}}">报装街镇:</view>
+                <view class="picker" wx:if="{{townIndex!=''}}">{{townArray[townIndex]}}</view>
+                <view class="picker-init" wx:else>请选择</view>
+            </view>
+        </picker>
+    </view>
+    <view class="divLine" wx:if="{{countyID!=-1}}"></view>
+    <view class="address-choose" wx:if="{{townID!=-1&&ishowCmu}}">
+        <picker bindchange="__e" data-event-opts="{{[ [ 'change',[ [ 'communityPickerChange',['$event'] ] ] ] ]}}" disabled="{{disCmu}}" range="{{communityArray}}" value="{{communityIndex}}">
+            <view class="pickerview">
+                <view class="label notnull">社区:</view>
+                <view class="picker" wx:if="{{communityIndex!=''}}">{{communityArray[communityIndex]}}</view>
+                <view class="picker-init" wx:else>请选择</view>
+            </view>
+        </picker>
+    </view>
+</view>

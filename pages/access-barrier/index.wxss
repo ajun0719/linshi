@@ -1,0 +1,65 @@
+.access-barrier-view {
+    height: 100%;
+    width: 100%
+}
+
+.acc-img,.access-barrier-message,.person-message,.tag-view {
+    background: #fff;
+    margin: 20rpx 0
+}
+
+.am-panel {
+    color: #636060;
+    font-size: 32rpx;
+    font-weight: 700;
+    padding-left: 10rpx
+}
+
+.confirm-sumbit-view {
+    padding: 20rpx
+}
+
+.tag-view2 {
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 10px 0rpx;
+    width: 100%
+}
+
+.one-tag {
+    color: #495060;
+    font-size: 16px;
+    padding: 10rpx;
+    white-space: nowrap;
+    width: 80rpx
+}
+
+.tag-view {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 10rpx 15rpx
+}
+
+.example-body,.tag-view {
+    display: -webkit-flex;
+    display: flex
+}
+
+.example-page {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding: 20rpx
+}
+
+.acc-img {
+    margin-top: 20rpx
+}

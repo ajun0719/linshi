@@ -1,0 +1,9 @@
+<view class="main">
+    <view class="tv_main">
+        <view class="iconfont icon-result-success"></view>
+        <text class="tv_result">{{tvResult}}</text>
+    </view>
+    <view class="pay-btn">
+        <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'confrim',['$event'] ] ] ] ]}}">完成</button>
+    </view>
+</view>

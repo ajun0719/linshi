@@ -1,0 +1,91 @@
+<view>
+    <view wx:if="{{recordData}}">
+        <view class="access-barrier-topView">
+            <i-panel bind:__l="__l" iClass="am-panel" title="故障单进度信息" vueId="5e006444-1" vueSlots="{{['default']}}">
+                <view class="item-normalText">
+                    <view class="textLabel">处理状态:</view>
+                    <text class="textRedValue">{{orderStatusText}}</text>
+                </view>
+                <view class="item-normalText" wx:if="{{recordData.Name&&(recordData.OrderStatus==1||recordData.OrderStatus==2)}}">
+                    <view class="textLabel">接单人:</view>
+                    <text class="textValue">{{recordData.Name}}</text>
+                </view>
+                <view bindtap="__e" class="item-normalText" data-event-opts="{{[ [ 'tap',[ [ 'makeWorkerPhone',['$event'] ] ] ] ]}}" wx:if="{{recordData.OrderStatus==1||recordData.OrderStatus==2}}">
+                    <view class="textLabel">接单人手机号码:</view>
+                    <text class="textValue" selectable="true">{{recordData.UserMob}}</text>
+                </view>
+            </i-panel>
+        </view>
+        <view class="access-barrier-content-view">
+            <view class="access-barrier-message">
+                <i-panel bind:__l="__l" iClass="am-panel" title="基本信息" vueId="5e006444-2" vueSlots="{{['default']}}">
+                    <i-input bind:__l="__l" disabled="{{disEdit}}" maxlength="20" right="{{true}}" title="区/县:" type="text" value="{{recordData.CountyName}}" vueId="{{'5e006444-3'+','+'5e006444-2'}}"></i-input>
+                    <i-input bind:__l="__l" disabled="{{disEdit}}" maxlength="20" right="{{true}}" title="街镇:" type="text" value="{{recordData.TownName}}" vueId="{{'5e006444-4'+','+'5e006444-2'}}"></i-input>
+                    <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['addressNameInput'] ] ] ]}}" disabled="{{isEdit}}" maxlength="50" right="{{true}}" title="详细地址*:" type="text" value="{{recordData.AddressAll}}" vueId="{{'5e006444-5'+','+'5e006444-2'}}"></i-input>
+                </i-panel>
+            </view>
+            <view class="person-message">
+                <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['personNameInput'] ] ] ]}}" disabled="{{isEdit}}" maxlength="20" right="{{true}}" title="联系人*:" type="text" value="{{recordData.Contact}}" vueId="5e006444-6"></i-input>
+                <view bindtap="__e" class="item-normalText" data-event-opts="{{[ [ 'tap',[ [ 'makeContactPhone',['$event'] ] ] ] ]}}">
+                    <view class="textLabel2">联系电话*:</view>
+                    <text bindtap="__e" class="textValue" data-event-opts="{{[ [ 'tap',[ [ 'makePhone',['$event'] ] ] ] ]}}" selectable="true">{{recordData.ContactTel}}</text>
+                </view>
+                <view class="contactsType">
+                    <text class="text-name">居住类别*:</text>
+                    <radio-group bindchange="__e" class="radio-group" data-event-opts="{{[ [ 'change',[ [ 'radioChange',['$event'] ] ] ] ]}}">
+                        <radio checked="{{item.checked}}" class="radio" disabled="{{isEdit}}" value="{{item.id}}" wx:for="{{contactRoles}}" wx:for-index="name" wx:key="name">
+                            <text>{{item.text}}</text>
+                        </radio>
+                    </radio-group>
+                </view>
+                <view class="divLine"></view>
+                <view bindtap="__e" class="item-normalText" data-event-opts="{{[ [ 'tap',[ [ 'makeLandlordPhone',['$event'] ] ] ] ]}}">
+                    <view class="textLabel2">房东联系电话*:</view>
+                    <text class="textValue" selectable="true" wx:if="{{recordData.LandlordPhone}}">{{recordData.LandlordPhone}}</text>
+                </view>
+            </view>
+            <view class="tag-view2">
+                <view class="one-tag notnull">故障问题:</view>
+                <view class="example-body">
+                    <uni-tag bind:__l="__l" class="tag-view" data-index="{{item.text}}" inverted="{{!item.checked}}" text="{{item.text}}" type="primary" vueId="{{'5e006444-7-'+index}}" wx:for="{{accessBarrierTags}}" wx:key="index"></uni-tag>
+                </view>
+            </view>
+            <view class="person-message">
+                <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['falutMessageInput'] ] ] ]}}" disabled="{{isEdit}}" maxlength="100" right="{{true}}" title="故障详情:" type="text" value="{{recordData.Describe}}" vueId="5e006444-8"></i-input>
+            </view>
+            <view class="acc-img" wx:if="{{$root.g0>0}}">
+                <i-panel bind:__l="__l" iClass="am-panel" style="paddingleft:5px;" title="门禁故障图片" vueId="5e006444-9" vueSlots="{{['default']}}">
+                    <view class="gallery">
+                        <view class="item" wx:for="{{accessBarrierImages}}" wx:key="index">
+                            <image bindtap="__e" class="item-img" data-event-opts="{{[ [ 'tap',[ [ 'previewImage',['$event'] ] ] ] ]}}" data-src="{{item}}" mode="aspectFill" src="{{item}}"></image>
+                            <image class="delete" hidden="{{isEdit}}" src="/static/images/img_delete.svg"></image>
+                        </view>
+                        <image bindtap="__e" class="add-img" data-event-opts="{{[ [ 'tap',[ [ 'uploadaccessImg',['$event'] ] ] ] ]}}" hidden="{{isAccImgAdd}}" mode="aspectFit" src="/static/images/add_pic.png"></image>
+                    </view>
+                </i-panel>
+            </view>
+            <view class="acc-img" wx:if="{{recordData.OrderStatus==1}}">
+                <i-panel bind:__l="__l" iClass="am-panel" style="paddingleft:5px;" title="维护反馈信息" vueId="5e006444-10" vueSlots="{{['default']}}">
+                    <view wx:if="{{$root.g1>0}}">
+                        <i-panel bind:__l="__l" iClass="amfb-panel" style="paddingleft:5px;" title="反馈图片" vueId="{{'5e006444-11'+','+'5e006444-10'}}" vueSlots="{{['default']}}">
+                            <view class="gallery">
+                                <view class="item" wx:for="{{feedBackImage}}" wx:key="index">
+                                    <image bindtap="__e" class="item-img" data-event-opts="{{[ [ 'tap',[ [ 'previewFbImage',['$event'] ] ] ] ]}}" data-src="{{item}}" mode="aspectFill" src="{{item}}"></image>
+                                    <image class="delete" data-index="{{index}}" hidden="true" src="/static/images/img_delete.svg"></image>
+                                </view>
+                                <image bindtap="__e" class="add-img" data-event-opts="{{[ [ 'tap',[ [ 'upFeedBackImg',['$event'] ] ] ] ]}}" hidden="true" mode="aspectFit" src="/static/images/add_pic.png"></image>
+                            </view>
+                        </i-panel>
+                    </view>
+                    <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['feedbackRemarkInput'] ] ] ]}}" disabled="true" right="{{true}}" title="维护情况反馈:" value="{{recordData.FeedbackRemark}}" vueId="{{'5e006444-12'+','+'5e006444-10'}}"></i-input>
+                </i-panel>
+            </view>
+            <view class="cancel-order-view" wx:if="{{recordData.OrderStatus==3||recordData.OrderStatus==2}}">
+                <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'cancelOrder',['$event'] ] ] ] ]}}">取消故障单</button>
+            </view>
+        </view>
+    </view>
+    <view class="no-data-view" wx:if="{{recordData==null}}">
+        <view class="empityText">暂无数据</view>
+    </view>
+</view>

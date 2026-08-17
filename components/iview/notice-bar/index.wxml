@@ -1,0 +1,9 @@
+<view class="i-class i-noticebar" style="{{'color: '+color+'; background-color: '+backgroundcolor}}" wx:if="{{show}}">
+    <i-icon bind:__l="__l" class="i-noticebar-icon" color="{{color}}" size="24" type="{{icon}}" vueId="1a83da29-1" wx:if="{{icon}}"></i-icon>
+    <view class="i-noticebar-content-wrap">
+        <view animation="{{animationData}}" class="{{[ 'i-noticebar-content '+(loop?'i-noticebar-content-loop':'') ]}}">
+            <slot></slot>
+        </view>
+    </view>
+    <i-icon bind:__l="__l" bind:tap="__e" class="i-noticebar-operation" color="{{color}}" data-event-opts="{{[ [ '^tap',[ ['handleClose'] ] ] ]}}" size="20" type="close" vueId="1a83da29-2" wx:if="{{closable}}"></i-icon>
+</view>

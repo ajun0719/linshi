@@ -1,0 +1,258 @@
+.page {
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    overflow-x: hidden;
+    width: 100vw
+}
+
+.userinfo {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #1e90ff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 200rpx;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 15rpx;
+    padding: 0 30rpx;
+    position: relative;
+    width: 100%
+}
+
+.userDefault_avatar,.userinfo-avatar {
+    border-radius: 50%;
+    height: 148rpx;
+    width: 148rpx
+}
+
+.userinfo-nickname,.userinfo-phone {
+    color: #fff;
+    font-size: 35rpx;
+    font-weight: 700;
+    margin-left: 15rpx;
+    margin-top: 5rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.info {
+    background: #1e90ff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    left: 180rpx;
+    margin-left: 30rpx;
+    position: absolute;
+    top: 50rpx;
+    width: 300rpx
+}
+
+.my-goods {
+    margin-top: 25rpx;
+    width: 45%
+}
+
+.item-goods,.my-goods {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.item-goods {
+    border-radius: 15rpx;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 27rpx;
+    font-weight: 700;
+    min-height: 170rpx;
+    width: 170rpx
+}
+
+.img-goods {
+    height: 170rpx;
+    width: 170rpx
+}
+
+.btncheck {
+    margin-top: 40rpx;
+    padding: 20rpx
+}
+
+.btnlogout {
+    margin-top: 50rpx;
+    padding: 20rpx;
+    text-align: center
+}
+
+.iconfont {
+    color: #fff;
+    font-size: 35px
+}
+
+.item-cf {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 15rpx
+}
+
+.cf {
+    color: #f7f7f7;
+    font-size: 22rpx;
+    white-space: nowrap
+}
+
+.item-main {
+    background: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: 20rpx;
+    padding: 8rpx
+}
+
+.item-main,.un {
+    border-radius: 10rpx
+}
+
+.un {
+    font-size: 25rpx;
+    font-weight: 700;
+    margin-left: 10rpx;
+    padding: 3rpx 8rpx
+}
+
+.bluebg {
+    background: #16b2f0
+}
+
+.graybg {
+    background: #b8b8b8
+}
+
+.myqrcode {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: absolute;
+    right: 80rpx;
+    top: 50rpx
+}
+
+.icon-qrcode {
+    color: #fff;
+    font-size: 29px;
+    height: 35rpx;
+    margin-right: 20rpx;
+    width: 35rpx
+}
+
+.qrtext {
+    color: #fff;
+    font-size: 25rpx;
+    margin-top: 40rpx
+}
+
+.utils {
+    background: #fff;
+    border-radius: 10rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 20rpx;
+    padding-bottom: 20rpx
+}
+
+.btn-switch {
+    background-color: #fff;
+    color: #878787
+}
+
+.Popup {
+    background: rgba(51,51,51,.2);
+    height: 100%;
+    top: 0;
+    z-index: 10
+}
+
+.Popup,.catalogue {
+    position: fixed;
+    width: 100%
+}
+
+.catalogue {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    z-index: 20
+}
+
+.qiehuan {
+    padding: 0rpx 20rpx 0rpx 30rpx
+}
+
+.qiehuan,.qiehuan .qhanniu {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.qiehuan .qhanniu {
+    height: 108rpx
+}
+
+.qiehuan .qhanniu::after {
+    border: none
+}
+
+.qiehuan .qhimg_title {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 108rpx
+}
+
+.qiehuan .qhimg_title .qh {
+    color: #4169e1;
+    font-size: 50rpx;
+    width: 70rpx
+}
+
+.qiehuan .qhimg_title .title {
+    color: #303133;
+    font-size: 30rpx;
+    margin-right: 10rpx
+}
+
+.qiehuan .qhimg_title .image {
+    height: 47rpx;
+    margin-right: 20rpx;
+    width: 47rpx
+}

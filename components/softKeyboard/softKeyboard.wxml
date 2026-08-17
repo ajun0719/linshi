@@ -1,0 +1,24 @@
+<view class="softKeyboard">
+    <view class="citykeyboard" wx:if="{{isCityKeyboard}}">
+        <view class="btnList" wx:for="{{city}}" wx:key="index">
+            <view class="box" wx:for="{{item}}" wx:for-index="index2" wx:for-item="it" wx:key="index2">
+                <view bindtap="__e" class="ABC" data-event-opts="{{[ [ 'tap',[ [ 'handleToggleClickFun',['$event'] ] ] ] ]}}" data-val="ABC" hoverClass="active" wx:if="{{it.name==='ABC'}}">ABC</view>
+                <block wx:else>
+                    <view bindtap="__e" class="Delete" data-event-opts="{{[ [ 'tap',[ [ 'handleDeleteClickFun',['$event'] ] ] ] ]}}" data-val="delete" hoverClass="active" wx:if="{{it.name==='delete'}}">删除</view>
+                    <view bindtap="__e" class="{{[it.dsb?'disabled':'']}}" data-disabled="{{it.dsb}}" data-event-opts="{{[ [ 'tap',[ [ 'handleKeyClickFun',['$event'] ] ] ] ]}}" data-val="{{it.name}}" hoverClass="active" wx:else>{{it.name}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="letterKeyboard" wx:else>
+        <view class="btnList" wx:for="{{letter}}" wx:key="index">
+            <view class="box" wx:for="{{item}}" wx:for-index="index2" wx:for-item="it" wx:key="index2">
+                <view bindtap="__e" class="back" data-event-opts="{{[ [ 'tap',[ [ 'handleToggleClickFun',['$event'] ] ] ] ]}}" data-val="back" hoverClass="active" wx:if="{{it.name==='back'}}">返回</view>
+                <block wx:else>
+                    <view bindtap="__e" class="Delete" data-event-opts="{{[ [ 'tap',[ [ 'handleDeleteClickFun',['$event'] ] ] ] ]}}" data-val="delete" hoverClass="active" wx:if="{{it.name==='delete'}}">删除</view>
+                    <view bindtap="__e" class="{{[it.dsb?'disabled':'']}}" data-disabled="{{it.dsb}}" data-event-opts="{{[ [ 'tap',[ [ 'handleKeyClickFun',['$event'] ] ] ] ]}}" data-val="{{it.name}}" hoverClass="active" wx:else>{{it.name}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-transition": "components/uni-transition/uni-transition",
+    "address-view": "components/address-template",
+    "i-cell": "components/iview/cell/index",
+    "i-cell-group": "components/iview/cell-group/index",
+    "i-icon": "components/iview/icon/index",
+    "i-input": "components/iview/input/index",
+    "i-notice-bar": "components/iview/notice-bar/index",
+    "i-panel": "components/iview/panel/index",
+    "i-switch": "components/iview/switch/index",
+    "tui-actionsheet": "components/thorui/actionsheet/actionsheet",
+    "tui-modal": "components/thorui/modal/modal",
+    "tui-skeleton": "components/thorui/tui-skeleton/tui-skeleton",
+    "wuc-tab": "components/wuc-tab/wuc-tab"
+  }
+}

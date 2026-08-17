@@ -1,0 +1,39 @@
+<view>
+    <view class="group-info">
+        <view class="item-child">
+            <view class="creater-info">{{item.PointName}}</view>
+            <view class="{{[opening?'backfe3a20':'back16b2f0']}}" style="border-radius:10rpx;">
+                <view bindtap="__e" class="lanyakaimen" data-event-opts="{{[ [ 'tap',[ [ 'openDoor_FR',['$event'] ] ] ] ]}}" wx:if="{{item.Cmd}}">
+                    <view class="iconfont icon-open-door add-btn1"></view>
+                    <view class="lanya">{{opening?'开门中':'蓝牙开门'}}</view>
+                </view>
+                <view class="lanyakaimen unopen" wx:else>
+                    <view class="iconfont icon-open-door add-btn1"></view>
+                    <view class="lanya">蓝牙开门</view>
+                </view>
+            </view>
+        </view>
+        <view class="item-view">
+            <view style="width:90px;display:flex;justify-content:center;">
+                <text bindtap="__e" class="tx-llmm" data-event-opts="{{[ [ 'tap',[ [ 'showLlmm',['$event'] ] ] ] ]}}" data-item="{{item}}" wx:if="{{item.Cmd}}">临时密码</text>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="true" class="modal" wx:if="{{visible}}">
+        <view class="mask"></view>
+        <view class="gopay_tip">
+            <view class="title-view">
+                <text class="tip_title">临时密码生成</text>
+            </view>
+            <view class="llmm-content-view">
+                <text class="tip_content" space="emsp">临时密码为:</text>
+                <text class="content_llmm" selectable="true">{{llmm?llmm:''}}</text>
+            </view>
+            <view class="tishi">请进入屏幕键盘，输入密码即可开门</view>
+            <view class="btn-modal">
+                <button bindtap="__e" class="tip_cancel" data-event-opts="{{[ [ 'tap',[ [ 'cancelLlmm',['$event'] ] ] ] ]}}">确定</button>
+                <button bindtap="__e" class="tip_confirm" data-event-opts="{{[ [ 'tap',[ [ 'copyLlmm',['$event'] ] ] ] ]}}">复制密码</button>
+            </view>
+        </view>
+    </view>
+</view>

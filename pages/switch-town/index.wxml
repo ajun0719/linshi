@@ -1,0 +1,18 @@
+<view>
+    <view class="container-inner">
+        <view class="container">
+            <scroll-view scrollIntoView="{{scrollTopId}}" scrollTop="{{scrollTop}}" scrollY="true" style="{{'height:'+winHeight+'px'}}">
+                <view class="city-picker" wx:if="{{currentAddress!=''}}">
+                    <view bindtap="__e" class="hotcity-common" data-event-opts="{{[ [ 'tap',[ [ 'reGetLocation',['$event'] ] ] ] ]}}">当前</view>
+                    <view class="current-city">{{currentAddress}}</view>
+                </view>
+                <view class="selection" wx:for="{{cityList}}" wx:for-index="quIndex" wx:key="quIndex">
+                    <view class="item-letter">{{item.parentname}}</view>
+                    <view class="city-main">
+                        <view bindtap="__e" class="item-city" data-event-opts="{{[ [ 'tap',[ [ 'chooseCity',['$event'] ] ] ] ]}}" data-qu="{{quIndex}}" data-town="{{id}}" wx:for="{{item.itemlist}}" wx:for-index="id" wx:for-item="ct" wx:key="id">{{ct.itemname}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

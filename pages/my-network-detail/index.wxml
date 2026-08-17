@@ -1,0 +1,54 @@
+<view>
+    <view class="main" wx:if="{{mealData}}">
+        <view class="order-status">
+            <view class="orderNum">订单状态</view>
+            <text class="orderStatus">{{mealData.PayStatusName}}</text>
+        </view>
+        <view class="goods-list">
+            <view class="list-title">套餐内容</view>
+            <view class="a-goods">
+                <view class="img-box">
+                    <image class="service_img" src="/static/images/item-service.png"></image>
+                </view>
+                <view class="text-box">
+                    <view class="arow01">
+                        <view class="goods-name">{{mealData.PackageName}}</view>
+                        <view class="goods-price">{{'¥ '+mealData.PackagePrice}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="service-title">其他费用</view>
+            <view class="other-cost" wx:for="{{mealData.CostList}}" wx:key="index">
+                <view class="other-cost-child">
+                    <view class="textLabel">{{item.CostName+':'}}</view>
+                    <view class="goods-price">{{'¥ '+item.CostAmount}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="adcolumnMessage">
+            <view class="list-title">基础信息</view>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="运营商:" type="text" value="{{mealData.OperatorName}}" vueId="0553667b-1"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" right="{{true}}" title="备注:" type="textarea" value="{{mealData.Remark}}" vueId="0553667b-2"></i-input>
+        </view>
+        <view class="orderData">
+            <view class="list-title">订单信息</view>
+            <view class="orderPrice">
+                <view class="textLabel">订单总价:</view>
+                <text class="textRedValue">{{'¥ '+mealData.OrderAmount}}</text>
+            </view>
+            <view class="orderPrice">
+                <view class="textLabel">创建时间:</view>
+                <text>{{mealData.CreateTime}}</text>
+            </view>
+            <view class="orderPrice" wx:if="{{mealData.PayStatus==1}}">
+                <view class="textLabel">支付时间:</view>
+                <text>{{mealData.PayTime}}</text>
+            </view>
+        </view>
+        <view class="btn-save-class" wx:if="{{mealData.PayStatus==0||mealData.PayStatus==0}}">
+            <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'confirmPay',['$event'] ] ] ] ]}}">立即支付</button>
+        </view>
+    </view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

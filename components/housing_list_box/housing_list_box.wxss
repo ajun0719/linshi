@@ -1,0 +1,224 @@
+.housing_list_item_box {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    padding: 10rpx 0;
+    width: 100%
+}
+
+.housing_list_item_img_box {
+    height: 220rpx;
+    margin-right: 20rpx;
+    position: relative;
+    width: 220rpx
+}
+
+.housing_list_item_img {
+    max-height: 220rpx;
+    width: 220rpx
+}
+
+.housing_list_item_img_bg {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.housing_list_item_content {
+    border-bottom: 2rpx solid #e8e8e8;
+    color: #666;
+    font-size: 20rpx;
+    font-weight: 500;
+    min-height: 230rpx;
+    width: 100%
+}
+
+.housing_name {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 800;
+    line-height: 50rpx
+}
+
+.housing_address,.housing_configuration,.housing_intro,.housing_rent_price {
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 10rpx
+}
+
+.housing_intro_item {
+    border-right: 2rpx solid #979797;
+    line-height: 30rpx;
+    padding: 0 10rpx
+}
+
+.housing_intro_item:last-child {
+    border-right: 0
+}
+
+.housing_configuration {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.housing_configuration_item {
+    background: #ffeecf;
+    border-radius: 8rpx;
+    color: #322100;
+    font-size: 18rpx;
+    line-height: 40rpx;
+    margin-right: 10rpx;
+    margin-top: 5rpx;
+    padding: 0 8rpx
+}
+
+.housing_rent_price,.rent_price {
+    line-height: 50rpx
+}
+
+.rent_price {
+    color: #ff362d;
+    font-size: 36rpx;
+    font-weight: 800;
+    margin-right: 10rpx
+}
+
+wx-image {
+    will-change: transform
+}
+
+.housing_name1 {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 800
+}
+
+.housing_configuration_item1 {
+    background: #ffeecf;
+    border-radius: 8rpx;
+    color: #322100;
+    font-size: 22rpx;
+    margin-right: 10rpx;
+    margin-top: 5rpx;
+    padding: 10rpx 8rpx
+}
+
+.room_tip1 {
+    float: left;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%
+}
+
+.room_tip1,.room_tip1 .Towards_Floor_Label1 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.room_tip1 .Towards_Floor_Label1 .biaoqianList1 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-top: 10rpx
+}
+
+.room_tip1 .Towards_Floor_Label1 .biaoqianList1 .bqtitle1 {
+    color: #666;
+    font-size: 30rpx
+}
+
+.room_tip1 .Towards_Floor_Label1 .biaoqianList1 .list1 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 20rpx
+}
+
+.room_tip1 .Towards_Floor_Label1 .Towards_Floor1 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 30rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.room_tip1 .Towards_Floor_Label1 .Towards_Floor1 .TF1 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 50%
+}
+
+.room_tip1 .Towards_Floor_Label1 .Towards_Floor1 .TF1 .Towards1 {
+    color: #999
+}
+
+.room_tip1 .Towards_Floor_Label1 .Towards_Floor1 .TF1 .Floor1 {
+    color: #333;
+    margin-left: 20rpx
+}
+
+.room_tip1 .room_addr1 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin: 10rpx 0
+}
+
+.room_tip1 .room_addr1 .room_addr_img1 {
+    width: 28rpx
+}
+
+.room_tip1 .room_addr1 .room_addr_text1 {
+    color: #333;
+    font-size: 30rpx;
+    margin-left: 8rpx
+}
+
+.zj_hx_mj1 {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 30rpx;
+    margin-top: 10rpx
+}
+
+.zj_hx_mj1,.zj_hx_mj1 .yuezu1 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.zj_hx_mj1 .yuezu1 {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 30%
+}
+
+.zj_hx_mj1 .yuezu1 .Rent1 {
+    color: #ff362d;
+    font-size: 30rpx;
+    font-weight: 600
+}
+
+.zj_hx_mj1 .yuezu1 .Rent_title1 {
+    color: #666;
+    font-size: 28rpx
+}

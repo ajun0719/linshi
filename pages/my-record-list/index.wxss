@@ -1,0 +1,81 @@
+.top {
+    height: 90rpx;
+    left: 0;
+    line-height: 90rpx;
+    margin-bottom: 10rpx;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.list-main {
+    margin-top: 100rpx
+}
+
+.group-item {
+    background: #fff;
+    border: 2rpx solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: auto;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 10rpx auto;
+    min-height: 150rpx;
+    padding: 10rpx;
+    width: 700rpx
+}
+
+.group-info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.group-name {
+    color: #2b2a2a;
+    font-size: 32rpx;
+    margin: 15rpx 20rpx
+}
+
+.group-name,.order-status {
+    font-family: 微软雅黑;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.order-status {
+    color: #f70b0b;
+    font-size: 26rpx;
+    margin: 15rpx 0rpx
+}
+
+.creater-info {
+    color: #706f6f;
+    font-size: 28rpx
+}
+
+.create-time,.creater-info {
+    font-family: 微软雅黑;
+    margin: 15rpx 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.create-time {
+    color: #979494;
+    font-size: 25rpx
+}
+
+.no-data-view {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 50%
+}

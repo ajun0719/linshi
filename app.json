@@ -1,0 +1,292 @@
+{
+  "entryPagePath": "pages/login/index",
+  "pages": [
+    "pages/login/index",
+    "pages/home-xzfd/home",
+    "pages/home/index",
+    "pages/my/index",
+    "pages/xieyi/xieyi",
+    "pages/message/index",
+    "pages/authorize/index",
+    "pages/access-barrier/index",
+    "pages/username/index",
+    "pages/update-header/index",
+    "pages/my-promo-code/index",
+    "pages/entrance-examination/index",
+    "pages/my-keybag/index",
+    "pages/my-keybag/newindex",
+    "pages/my-record-list/index",
+    "pages/my-record-detail/index",
+    "pages/my-record-type/index",
+    "pages/my-defend-recordlist/index",
+    "pages/buy-network-service/index",
+    "pages/my-defendrecord-detail/index",
+    "pages/bluetooth-order-pay/index",
+    "pages/pay-check/index",
+    "pages/switch-town/index",
+    "pages/switch-userphone/index",
+    "pages/addLicensePlate/index",
+    "pages/brake-pay-order/index",
+    "pages/brake-scan-result/index",
+    "pages/brake-order-confirm/index",
+    "pages/network/index",
+    "pages/my-network-order/index",
+    "pages/my-network-detail/index",
+    "pages/network-confirm-input/index",
+    "pages/helper/index",
+    "pages/brf-list/brf-list",
+    "pages/net-qrcode/index",
+    "pages/brf-message/index",
+    "pages/EquipmenLlist",
+    "pages/helper/SmokeDetail",
+    "pages/authorize/user",
+    "pages/authorize/phone",
+    "pages/authorize/phoneLogin",
+    "pages/my-keybag/mobile_open_door",
+    "pages/bluetooth-order-pay/huIndex"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要您的位置信息以搜索蓝牙设备"
+    },
+    "scope.bluetooth": {
+      "desc": "需要使用蓝牙功能连接您的设备"
+    }
+  },
+  "networkTimeout": {
+    "request": 60000
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "社区服务",
+        "pagePath": "pages/home/index",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/selectHome.png"
+      },
+      {
+        "text": "房屋管理",
+        "pagePath": "pages/home-xzfd/home",
+        "iconPath": "static/icon/xzfd.png",
+        "selectedIconPath": "static/icon/selectXzfd.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/index",
+        "iconPath": "static/icon/my.png",
+        "selectedIconPath": "static/icon/selectMy.png"
+      }
+    ],
+    "color": "#707070",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff"
+  },
+  "preloadRule": {
+    "pages/helper/index": {
+      "network": "all",
+      "packages": [
+        "helper-package"
+      ]
+    },
+    "helper-package/pages/event/index": {
+      "network": "all",
+      "packages": [
+        "helper-package"
+      ]
+    },
+    "helper-package/pages/wp-order-type/index": {
+      "network": "all",
+      "packages": [
+        "helper-package"
+      ]
+    },
+    "helper-package/pages/jzz-list/index": {
+      "network": "all",
+      "packages": [
+        "helper-package"
+      ]
+    }
+  },
+  "embeddedAppIdList": [
+    "wx9f75b01dcb4b1a79",
+    "wx9f75b01dcb4b1a79"
+  ],
+  "renderer": "webview",
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "componentFramework": "exparser",
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "迈云通",
+    "navigationBarTextStyle": "black"
+  },
+  "subPackages": [
+    {
+      "root": "helper-package/",
+      "pages": [
+        "pages/company-operate/index",
+        "pages/charging-pile/index",
+        "pages/charging-pile-record/index",
+        "pages/cashout-list/index",
+        "pages/cashout-set/index",
+        "pages/cash-set-bind/index",
+        "pages/cashout-set-detail/index",
+        "pages/my-person-message/index",
+        "pages/menjin-pay/index",
+        "pages/add-suiteperson/index",
+        "pages/sanitationfee-main/index",
+        "pages/my-sforder-detail/index",
+        "pages/brake-coupon-qrcode/index",
+        "pages/account-list/account-list",
+        "pages/update-buildsuite/index",
+        "pages/address-message/index",
+        "pages/jzz/index",
+        "pages/jzz-list/index",
+        "pages/event/index",
+        "pages/event-search/index",
+        "pages/event-message/index",
+        "pages/wp-order-type/index",
+        "pages/wp-order/index",
+        "pages/wp-order-detail/index",
+        "About",
+        "refund",
+        "AboutUs",
+        "fangdongHouse",
+        "mySuite",
+        "releaseRoom",
+        "leaseContract",
+        "check_in",
+        "contract_details",
+        "signContract",
+        "code",
+        "preview",
+        "tenantSign",
+        "bill_list",
+        "registerHelp",
+        "register",
+        "registerDetail",
+        "BuildingCode",
+        "fangdongbuil_list",
+        "housing_resource_list",
+        "housing_resource_details",
+        "BQCdetail",
+        "BuildingImg",
+        "AccessBarrier",
+        "AddAccessBarrier",
+        "AccessBarrierDetail",
+        "SafetyPayment",
+        "Renewal",
+        "PatrolDetails",
+        "Scoring",
+        "SanitationList",
+        "SanitationDetail",
+        "integralList",
+        "bluetooth-order-pay",
+        "CollectionAccount",
+        "paizhao",
+        "investigationFlag",
+        "refundAmount",
+        "upladImg",
+        "camera",
+        "explain",
+        "tiaozhuanDianxin",
+        "integraDetail",
+        "lianxi",
+        "OrderDetails",
+        "shopMore",
+        "addressList",
+        "ChargingRecord",
+        "makeCollections",
+        "makeCollDetail",
+        "ScanQRCode",
+        "chargeTrains",
+        "leaseList",
+        "meter",
+        "pages/electricityMeter/electricity",
+        "meterDeatail",
+        "pages/electricityMeter/electricitybill",
+        "meterManage",
+        "NFC",
+        "pages/waterMeter/TenantWaterMeter",
+        "ceshi",
+        "housingServices",
+        "Broadband_Services",
+        "stop_services",
+        "registration",
+        "preparationOrder",
+        "Partner_orders",
+        "Partner_orders_list",
+        "Partner_orders_detail",
+        "pages/electricityMeter/readingRecord",
+        "pages/electricityMeter/recordList",
+        "pages/waterMeter/waterBill",
+        "pages/waterMeter/waterRecord",
+        "pages/Manage_electricity/M_electricity",
+        "pages/Manage_electricity/M_electricitybill",
+        "pages/Manage_electricity/M_readingRecord",
+        "pages/Manage_electricity/M_recordList",
+        "pages/Manage_electricity/M_fund",
+        "pages/waterMeter/Recharge",
+        "pages/electricityMeter/Recharge",
+        "pages/Manage_Water/M_Water",
+        "pages/Manage_Water/M_waterBill",
+        "pages/Manage_Water/M_WaterReadRecord",
+        "uchar",
+        "PatrolPhotography",
+        "ceshi1",
+        "SafetyDetection"
+      ]
+    },
+    {
+      "root": "repair/",
+      "pages": [
+        "report-complaints",
+        "law-regulation",
+        "law-regulation-message",
+        "Interaction",
+        "feedback",
+        "feedbackDetail",
+        "newsDeatil",
+        "RealName",
+        "RealDetail/RealDetail",
+        "RealFeedBack",
+        "SafetyInformation",
+        "PaperContract",
+        "pages/registration/door_registration",
+        "pages/registration/open_Contract",
+        "pages/registration/order",
+        "pages/registration/BuildingContract",
+        "pages/registration/orderDetail",
+        "Bluetooth_initialization",
+        "accessRecord",
+        "FR_Bluetooth_initialization",
+        "setDoor",
+        "LOOKPDF",
+        "spvideo",
+        "pages/registration/DoorProtocol",
+        "pages/registration/image_video",
+        "pages/OpenTheDoor",
+        "pages/PaymentRecord",
+        "Tenant_Order",
+        "pages/Engineering/Assistant",
+        "pages/Engineering/addEquipment",
+        "pages/Engineering/AssistantDetail",
+        "pages/Engineering/AddAdministrator",
+        "pages/CustomizationPrice",
+        "BluePermission",
+        "pages/PointsList"
+      ]
+    },
+    {
+      "root": "pages_system/",
+      "pages": [
+        "tenants_list/tenants_list"
+      ]
+    }
+  ],
+  "plugins": {}
+}

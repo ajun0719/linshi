@@ -1,0 +1,10 @@
+<view>
+    <view class="{{['tui-actionsheet-class','tui-actionsheet',show?'tui-actionsheet-show':'']}}">
+        <view class="tui-tips" style="{{'font-size:'+size+'rpx'+';'+'color:'+color+';'}}" wx:if="{{tips}}">{{''+tips+''}}</view>
+        <view class="{{[isCancel?'tui-operate-box':'']}}">
+            <view bindtap="__e" class="{{['tui-actionsheet-btn','tui-actionsheet-divider',item.g0?'tui-btn-last':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'handleClickItem',['$event'] ] ] ] ]}}" data-index="{{index}}" hoverClass="tui-actionsheet-hover" hoverStayTime="{{150}}" style="{{'color:'+(item[$orig].color||'#1a1a1a')+';'}}" wx:for="{{$root.l0}}" wx:key="index">{{item[$orig].text}}</view>
+        </view>
+        <view bindtap="__e" class="tui-actionsheet-btn tui-actionsheet-cancel" data-event-opts="{{[ [ 'tap',[ [ 'handleClickCancel',['$event'] ] ] ] ]}}" hoverClass="tui-actionsheet-hover" hoverStayTime="{{150}}" wx:if="{{isCancel}}">取消</view>
+    </view>
+    <view bindtap="__e" class="{{['tui-actionsheet-mask',show?'tui-mask-show':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'handleClickMask',['$event'] ] ] ] ]}}"></view>
+</view>

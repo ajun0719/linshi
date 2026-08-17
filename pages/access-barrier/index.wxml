@@ -1,0 +1,45 @@
+<view>
+    <view class="access-barrier-view">
+        <view class="access-barrier-message">
+            <text class="am-panel"> 基本信息 </text>
+            <address-view areaArray="{{areaArray}}" areaIndex="{{areaIndex}}" bind:__l="__l" bind:areaPickerChange="__e" bind:communityPickerChange="__e" bind:townPickerChange="__e" communityArray="{{communityArray}}" communityID="{{communityID}}" communityIndex="{{communityIndex}}" countyID="{{countyID}}" data-event-opts="{{[ [ '^areaPickerChange',[ ['areaPickerChange'] ] ],[ '^townPickerChange',[ ['townPickerChange'] ] ],[ '^communityPickerChange',[ ['communityPickerChange'] ] ] ]}}" isGroupType="{{isGroupType}}" ishowCmu="{{ishowCmu}}" townArray="{{townArray}}" townID="{{townID}}" townIndex="{{townIndex}}" vueId="c4f3fa08-1"></address-view>
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['addressNameInput'] ] ] ]}}" isNotNull="true" maxlength="100" right="{{true}}" title="详细地址:" type="text" value="{{accessBarrierData.addressAll}}" vueId="c4f3fa08-2"></i-input>
+        </view>
+        <view class="person-message">
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['personNameInput'] ] ] ]}}" isNotNull="true" maxlength="10" right="{{true}}" title="联系人:" type="text" value="{{accessBarrierData.contact}}" vueId="c4f3fa08-3"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['personPhoneInput'] ] ] ]}}" isNotNull="true" maxlength="11" right="{{true}}" title="联系电话:" type="number" value="{{accessBarrierData.contactTel}}" vueId="c4f3fa08-4"></i-input>
+            <view class="contactsType">
+                <text class="text-name notnull">居住类别:</text>
+                <radio-group bindchange="__e" class="radio-group" data-event-opts="{{[ [ 'change',[ [ 'radioChange',['$event'] ] ] ] ]}}">
+                    <radio checked="{{item.checked}}" class="radio" value="{{item.id}}" wx:for="{{contactRoles}}" wx:for-index="name" wx:key="name">
+                        <text>{{item.text}}</text>
+                    </radio>
+                </radio-group>
+            </view>
+            <view class="divLine"></view>
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['landlordPhoneInput'] ] ] ]}}" maxlength="11" right="{{true}}" title="房东联系电话:" type="number" vueId="c4f3fa08-5"></i-input>
+        </view>
+        <view class="tag-view2">
+            <view class="one-tag notnull">故障问题:</view>
+            <view class="example-body">
+                <uni-tag bind:__l="__l" bind:click="__e" class="tag-view" data-event-opts="{{[ [ '^click',[ [ 'onOneChange',[index,'$0'],[ [ ['accessBarrierTags','',index,'text'] ] ] ] ] ] ]}}" data-index="{{item.text}}" inverted="{{!item.checked}}" text="{{item.text}}" type="primary" vueId="{{'c4f3fa08-6-'+index}}" wx:for="{{accessBarrierTags}}" wx:key="index"></uni-tag>
+            </view>
+        </view>
+        <view class="person-message">
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['falutMessageInput'] ] ] ]}}" maxlength="100" right="{{true}}" title="故障详情:" type="text" vueId="c4f3fa08-7"></i-input>
+        </view>
+        <view class="acc-img">
+            <text class="am-panel"> 门禁故障图片 </text>
+            <view class="gallery">
+                <view class="item" wx:for="{{accessBarrierImage}}" wx:key="index">
+                    <image bindtap="__e" class="item-img" data-event-opts="{{[ [ 'tap',[ [ 'previewImage',['$event'] ] ] ] ]}}" data-src="{{item}}" mode="aspectFill" src="{{item}}"></image>
+                    <image bindtap="__e" class="delete" data-event-opts="{{[ [ 'tap',[ [ 'deleteFun',['$event'] ] ] ] ]}}" data-index="{{index}}" src="/static/images/img_delete.svg"></image>
+                </view>
+                <image bindtap="__e" class="add-img" data-event-opts="{{[ [ 'tap',[ [ 'uploadaccessImg',['$event'] ] ] ] ]}}" hidden="{{isAccImgAdd}}" mode="aspectFit" src="/static/images/add_pic.png"></image>
+            </view>
+        </view>
+        <view class="confirm-sumbit-view">
+            <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{disSumbit}}">提交</button>
+        </view>
+    </view>
+</view>

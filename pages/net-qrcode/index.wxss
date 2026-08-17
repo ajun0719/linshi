@@ -1,0 +1,57 @@
+.main {
+    background: #fff;
+    border-radius: 5rpx;
+    height: 800rpx;
+    margin: 50rpx auto;
+    padding: 30rpx;
+    width: 660rpx
+}
+
+.park-top {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    min-height: 100rpx;
+    padding: 20rpx
+}
+
+.park-top .icon-youhuiquan {
+    color: #efb336;
+    font-size: 90rpx
+}
+
+.park-top .coupon-view {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+.park-top .coupon-view .park-name {
+    color: #2c2c2c;
+    font-size: 35rpx;
+    font-weight: 700
+}
+
+.park-top .coupon-view .coupons-type {
+    color: #495060;
+    font-size: 30rpx;
+    margin-top: 20rpx
+}
+
+.qrcode-view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 80rpx
+}
+
+.qrcode-view .qr-code {
+    margin: 20rpx auto
+}

@@ -1,0 +1,129 @@
+.uni-collapse-item {
+    box-sizing: border-box
+}
+
+.uni-collapse-item__title {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    transition: border-bottom-color .3s;
+    width: 100%
+}
+
+.uni-collapse-item__title-wrap {
+    -webkit-flex: 1;
+    flex: 1;
+    width: 100%
+}
+
+.uni-collapse-item__title-box {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    color: #303133;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 13px;
+    font-weight: 500;
+    height: 48px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    line-height: 48px;
+    padding: 0 15px;
+    width: 100%
+}
+
+.uni-collapse-item__title-box.is-disabled .uni-collapse-item__title-text {
+    color: #999
+}
+
+.uni-collapse-item__title.uni-collapse-item-border {
+    border-bottom: 1px solid #ebeef5
+}
+
+.uni-collapse-item__title.is-open {
+    border-bottom-color: transparent
+}
+
+.uni-collapse-item__title-img {
+    height: 22px;
+    margin-right: 10px;
+    width: 22px
+}
+
+.uni-collapse-item__title-text {
+    color: inherit;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.uni-collapse-item__title-arrow {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 20px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-right: 10px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    width: 20px
+}
+
+.uni-collapse-item__title-arrow-active {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg)
+}
+
+.uni-collapse-item__wrap {
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    will-change: height
+}
+
+.uni-collapse-item__wrap.is--transition {
+    border-radius: 20rpx;
+    transition-duration: .5s;
+    transition-property: height,border-bottom-width;
+    will-change: height
+}
+
+.uni-collapse-item__wrap-content {
+    border-bottom: 0 solid transparent;
+    color: #303133;
+    font-size: 13px;
+    position: absolute
+}
+
+.uni-collapse-item__wrap-content.uni-collapse-item--border {
+    border-bottom-color: #ebeef5;
+    border-bottom-width: 1px
+}
+
+.uni-collapse-item__wrap-content.open {
+    position: relative
+}
+
+.uni-collapse-item--animation {
+    transition-duration: .5s;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    transition-timing-function: ease
+}

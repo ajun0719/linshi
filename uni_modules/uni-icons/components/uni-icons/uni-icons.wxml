@@ -1,0 +1,3 @@
+<text bindtap="__e" class="{{['uni-icons','uniui-'+type,customPrefix,customPrefix?type:'']}}" data-event-opts="{{[ [ 'tap',[ [ '_onClick',['$event'] ] ] ] ]}}" style="{{styleObj}}">
+    <slot></slot>
+</text>

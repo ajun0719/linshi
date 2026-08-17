@@ -1,0 +1,47 @@
+<view class="codedialog data-v-3e251038" wx:if="{{show}}">
+    <view class="mask data-v-3e251038"></view>
+    <view class="dialog-view data-v-3e251038">
+        <view bindtap="__e" class="dialog-close data-v-3e251038" data-event-opts="{{[ [ 'tap',[ ['closeDialog'] ] ] ]}}">
+            <image class="data-v-3e251038" src="../../static/images/close.png"></image>
+        </view>
+        <view class="dialog-hd data-v-3e251038">
+            <view class="codedialog-maintitle data-v-3e251038">
+                <text class="data-v-3e251038">发送验证码</text>
+            </view>
+            <view class="codedialog-subtitle data-v-3e251038" wx:if="{{phone!=''&&phone!=null}}">
+                <text class="data-v-3e251038">{{'验证码已发送至：'+phone}}</text>
+            </view>
+        </view>
+        <view class="dialog-bd data-v-3e251038">
+            <view class="code-view data-v-3e251038">
+                <view class="code-item data-v-3e251038" wx:for="{{codeAry}}" wx:for-item="code" wx:key="index">{{code.val}}</view>
+            </view>
+        </view>
+        <view class="dialog-ft data-v-3e251038">
+            <view bindtap="__e" class="resend data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'resend',['$event'] ] ] ] ]}}" wx:if="{{countdown==60}}">重新发送</view>
+            <view class="countdown data-v-3e251038" wx:if="{{countdown<60}}">{{countdown+'s'}}</view>
+        </view>
+    </view>
+    <view class="keyboard data-v-3e251038">
+        <view class="keyboard-line data-v-3e251038">
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="1">1</view>
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="2">2</view>
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="3">3</view>
+        </view>
+        <view class="keyboard-line data-v-3e251038">
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="4">4</view>
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="5">5</view>
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="6">6</view>
+        </view>
+        <view class="keyboard-line data-v-3e251038">
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="7">7</view>
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="8">8</view>
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="9">9</view>
+        </view>
+        <view class="keyboard-line data-v-3e251038">
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="clear">清空</view>
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="0">0</view>
+            <view bindtap="__e" class="button-item data-v-3e251038" data-event-opts="{{[ [ 'tap',[ [ 'bindKeyEvent',['$event'] ] ] ] ]}}" data-val="delete">x</view>
+        </view>
+    </view>
+</view>

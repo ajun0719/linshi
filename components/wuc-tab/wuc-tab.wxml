@@ -1,0 +1,14 @@
+<scroll-view class="{{['wuc-tab',tabClass]}}" scrollLeft="{{scrollLeft}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" style="{{tabStyle}}">
+    <view wx:if="{{!textFlex}}">
+        <view bindtap="__e" class="{{['wuc-tab-item',index===tabCur?selectClass+' cur':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tabSelect',[index,'$0','$event'],[ [ ['tabList','',index,'key'] ] ] ] ] ] ]}}" id="{{index}}" wx:for="{{tabList}}" wx:key="index">
+            <text class="{{[item.icon]}}"></text>
+            <label class="_span">{{item.name}}</label>
+        </view>
+    </view>
+    <view class="flex text-center" wx:if="{{textFlex}}">
+        <view bindtap="__e" class="{{['wuc-tab-item','flex-sub',index===tabCur?selectClass+' cur':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tabSelect',[index,'$0','$event'],[ [ ['tabList','',index,'key'] ] ] ] ] ] ]}}" id="{{index}}" wx:for="{{tabList}}" wx:key="index">
+            <text class="{{[item.icon]}}"></text>
+            <label class="_span">{{item.name}}</label>
+        </view>
+    </view>
+</scroll-view>

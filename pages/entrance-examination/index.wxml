@@ -1,0 +1,26 @@
+<view>
+    <tui-skeleton backgroundColor="#fafafa" bind:__l="__l" borderRadius="10rpx" vueId="00bdbda0-1" wx:if="{{skeletonShow}}"></tui-skeleton>
+    <view class="caption-wrap tui-skeleton">
+        <view class="item-view" wx:for="{{iccardListData}}" wx:key="index">
+            <view class="caption-title">
+                <text class="tui-skeleton-rect">{{item.buildingall}}</text>
+            </view>
+            <view class="iccard-view">
+                <view class="iccard-item-view">
+                    <text class="tui-skeleton-rect">{{'卡号: '+item.cardnum}}</text>
+                    <text class="tui-skeleton-rect">{{'到期时间: '+tutil.dateFormat(item.endtime)}}</text>
+                </view>
+                <view class="{{[ 'tui-skeleton-circular','iccard-status '+(item.cardstate=='注销'?'iccard-cancel':'') ]}}">{{item.cardstate}}</view>
+            </view>
+        </view>
+        <view class="bottomview" wx:if="{{isFinish}}">
+            <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'onekeyToAb',['$event'] ] ] ] ]}}">门禁报障</button>
+        </view>
+    </view>
+    <view class="no-data-view" wx:if="{{$root.g0}}">
+        <view class="empityText">温馨提示：</view>
+        <view class="empityText">手机号与门卡联系方式一致，方可查询门卡信息</view>
+    </view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

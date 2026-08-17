@@ -1,0 +1,38 @@
+<view>
+    <view class="main">
+        <view class="top">
+            <wuc-tab bind:__l="__l" bind:change="__e" bind:updateTabCur="__e" data-event-opts="{{[ [ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ],[ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ],[ '^change',[ ['tabChange'] ] ] ]}}" tabList="{{tabList}}" tabCur="{{TabCur}}" textFlex="{{true}}" vueId="399782fc-1"></wuc-tab>
+        </view>
+        <view class="order-list-page">
+            <view class="order-item" wx:for="{{mealList}}" wx:key="index">
+                <view bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['$event'] ] ] ] ]}}" data-postition="{{index}}">
+                    <view class="itemTop">
+                        <navigator class="order-title line-ellipsis" hoverClass="none">
+                            <view>{{item.CreateTime}}</view>
+                        </navigator>
+                        <view class="orderStatus">{{item.PayStatusName}}</view>
+                    </view>
+                    <view class="order-info">
+                        <image class="service_img" src="/static/images/item-service.png"></image>
+                        <view class="order-desc">
+                            <view class="nameclass">
+                                <view class="movie-name line-ellipsis">{{item.PackageName}}</view>
+                                <view class="num">{{'¥ '+item.OrderAmount}}</view>
+                            </view>
+                            <view class="isp line-ellipsis">{{'运营商:'+item.OperatorName}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="divLine" wx:if="{{item.PayStatus==0}}"></view>
+                <view class="coent_list" wx:if="{{item.PayStatus==0}}">
+                    <button bindtap="__e" class="pay-btn" data-event-opts="{{[ [ 'tap',[ [ 'confirmPay',['$event'] ] ] ] ]}}" data-index="{{index}}" wx:if="{{item.PayStatus==0}}">立即付款</button>
+                </view>
+            </view>
+        </view>
+        <view class="no-data-view" wx:if="{{$root.g0}}">
+            <view class="empityText">暂无数据</view>
+        </view>
+    </view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

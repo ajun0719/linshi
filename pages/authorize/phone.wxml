@@ -1,0 +1,16 @@
+<view>
+    <view class="authorize-view">
+        <view class="userinfo">
+            <image class="userinfo-avatar" mode="cover" src="/static/images/maiyun.jpg"></image>
+            <text class="userinfo-nickname">迈云通</text>
+        </view>
+        <view class="usermotto">
+            <text class="user-motto">申请获得您的手机号码，对您的业务信息进行查询。</text>
+        </view>
+    </view>
+    <view style="margin:30rpx;">
+        <button bindgetphonenumber="__e" class="btn-primary" data-event-opts="{{[ [ 'getphonenumber',[ [ 'getPhoneNumber',['$event'] ] ] ] ]}}" openType="getPhoneNumber" wx:if="{{!preventFlag}}">允许使用手机号查询业务信息</button>
+        <button class="btn-primary" wx:else>允许使用手机号查询业务信息</button>
+        <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'OnRefuse',['$event'] ] ] ] ]}}" style="margin-top:30rpx;color:#333333;background:#f1f1f1;" type="default">不允许获得手机号码</button>
+    </view>
+</view>

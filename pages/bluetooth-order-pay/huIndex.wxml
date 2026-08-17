@@ -1,0 +1,34 @@
+<view>
+    <view class="main" wx:if="{{orderData}}">
+        <view class="goods-list">
+            <view class="listTop">
+                <view class="list-title">缴费信息</view>
+            </view>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="详细地址:" type="text" value="{{orderData.buildingall}}" vueId="6ee309cf-1"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="到期时间:" type="text" value="{{orderData.endtime}}" vueId="6ee309cf-2" wx:if="{{isFace=='2'}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" right="{{true}}" title="缴费月数:" type="text" value="{{orderData.monthcount+'个月'}}" vueId="6ee309cf-3" wx:if="{{isFace=='2'}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="开始时间:" type="text" value="{{tutil.dateFormat(orderData.begintime)}}" vueId="6ee309cf-4" wx:if="{{isFace!='2'}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="缴费人:" type="text" value="{{orderData.personname}}" vueId="6ee309cf-5" wx:if="{{isFace!='2'}}"></i-input>
+        </view>
+        <view class="order-main">
+            <view class="list-title">订单信息</view>
+            <view class="orderPrice">
+                <view class="textLabel">订单总价:</view>
+                <text class="textRedValue">{{'¥ '+orderData.total}}</text>
+            </view>
+            <view class="orderPrice">
+                <view class="textLabel">创建时间:</view>
+                <text>{{tutil.dateFormat(orderData.createtime,'yyyy-MM-dd hh:mm:ss')}}</text>
+            </view>
+        </view>
+        <view class="msg" wx:if="{{status==601}}">
+            <text>{{'提示：'+msg}}</text>
+        </view>
+        <view class="pay-btn" wx:if="{{status!=601}}">
+            <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'confirmPay',['$event'] ] ] ] ]}}">立即支付</button>
+            <button class="btn-primary btn-red" openType="share" wx:if="{{orderData.hasshare==1}}">发送给住户支付</button>
+        </view>
+    </view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

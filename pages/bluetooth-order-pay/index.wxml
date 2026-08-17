@@ -1,0 +1,42 @@
+<view>
+    <view class="main" wx:if="{{orderData}}">
+        <view class="goods-list">
+            <view class="listTop">
+                <view class="list-title">缴费信息</view>
+            </view>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="详细地址:" type="text" value="{{orderData.buildingall}}" vueId="1dfe533c-1"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" right="{{true}}" title="缴费月份:" type="text" value="{{orderData.months}}" vueId="1dfe533c-2" wx:if="{{isFace=='2'}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="开始时间:" type="text" value="{{tutil.dateFormat(orderData.begintime)}}" vueId="1dfe533c-3" wx:if="{{isFace!='2'}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="到期时间:" type="text" value="{{endtime}}" vueId="1dfe533c-4" wx:if="{{isFace!='2'}}"></i-input>
+            <i-input bind:__l="__l" disabled="{{true}}" maxlength="20" right="{{true}}" title="缴费人:" type="text" value="{{orderData.personname}}" vueId="1dfe533c-5" wx:if="{{isFace!='2'}}"></i-input>
+        </view>
+        <view class="order-main">
+            <view class="list-title">订单信息</view>
+            <view class="orderPrice">
+                <view class="textLabel">订单总价:</view>
+                <text class="textRedValue">{{'¥ '+orderData.total}}</text>
+            </view>
+            <view class="orderPrice">
+                <view class="textLabel">创建时间:</view>
+                <text>{{tutil.dateFormat(orderData.createtime,'yyyy-MM-dd hh:mm:ss')}}</text>
+            </view>
+            <view class="orderPrice" wx:if="{{costsettype==3||costsettype==20}}">
+                <view class="laqi">
+                    <view class="laqititle">
+                        <text>是否拉齐栋费:</text>
+                        <switch bindchange="__e" checked="{{islaqi==1?true:false}}" data-event-opts="{{[ [ 'change',[ [ 'switch1Change',['$event'] ] ] ] ]}}" disabled="{{true}}" style="transform:scale(0.7);"></switch>
+                    </view>
+                    <text class="tishi">续费后自动更新所有人的门禁到期时间</text>
+                </view>
+            </view>
+        </view>
+        <view class="msg" wx:if="{{zengsongremark}}">{{'提示:'+zengsongremark}}</view>
+        <view class="msg" wx:if="{{status==601}}">{{msg}}</view>
+        <view class="pay-btn">
+            <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'confirmPay',['$event'] ] ] ] ]}}">立即支付</button>
+            <button class="btn-primary btn-red" openType="share" wx:if="{{costtype!=2}}">发送给住户支付</button>
+        </view>
+    </view>
+</view>
+
+<wxs module="tutil" src="..\..\utils\formatDateTools.wxs"/>

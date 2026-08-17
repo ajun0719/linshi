@@ -1,0 +1,10 @@
+.nameInput-view {
+    margin-top: 20rpx
+}
+
+.nickname {
+    background: #fff;
+    height: 80rpx;
+    line-height: 80px;
+    padding-left: 20rpx
+}

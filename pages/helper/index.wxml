@@ -1,0 +1,59 @@
+<view>
+    <swiper autoplay="{{true}}" duration="{{1000}}" indicatorDots="{{false}}" interval="{{3000}}">
+        <swiper-item wx:for="{{bannerList}}" wx:key="index">
+            <image class="swiper-image" src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="fixed-container">
+        <view style="margin-top:60rpx;">
+            <view class="fixed-head1">
+                <view class="fixed-head-left">
+                    <text class="fixed-main-title">{{itemcontainer3.banner.title}}</text>
+                </view>
+                <view cashList="{{true}}" class="fixed-head-right" wx:if="{{itemcontainer3.banner.subtitle===undefined}}">
+                    <text class="fixed-link">{{banner.link}}</text>
+                </view>
+            </view>
+            <view class="fixed-head2" wx:if="{{itemcontainer3.banner.subtitle!==undefined}}">
+                <view class="fixed-head-left">
+                    <text class="fixed-sub-title">{{itemcontainer3.banner.subtitle}}</text>
+                </view>
+                <view cashList="{{true}}" class="fixed-head-right">
+                    <text bindtap="__e" class="fixed-link" data-event-opts="{{[ [ 'tap',[ [ 'toPageNew',['$event'] ] ] ] ]}}">{{itemcontainer3.banner.link}}</text>
+                </view>
+            </view>
+            <view class="fixed-list">
+                <view bindtap="__e" class="fixed-product2" data-event-opts="{{[ [ 'tap',[ [ 'navClick',['$0'],[ [ ['itemcontainer3.data','',index,'url'] ] ] ] ] ] ]}}" wx:for="{{itemcontainer3.data}}" wx:key="index">
+                    <image class="fixed-image2" mode="aspectFit" src="{{item.uri}}"></image>
+                    <view class="fixed-title">{{item.title}}</view>
+                    <view class="fixed-subtitle">{{item.subtitle}}</view>
+                </view>
+            </view>
+        </view>
+        <view style="margin-top:60rpx;">
+            <view class="fixed-head1">
+                <view class="fixed-head-left">
+                    <text class="fixed-main-title">{{itemcontainer2.banner.title}}</text>
+                </view>
+                <view cashList="{{true}}" class="fixed-head-right" wx:if="{{itemcontainer2.banner.subtitle===undefined}}">
+                    <text class="fixed-link">{{banner.link}}</text>
+                </view>
+            </view>
+            <view bindtap="__e" class="fixed-head2" data-event-opts="{{[ [ 'tap',[ [ 'itemBannerClick',['$event'] ] ] ] ]}}" wx:if="{{itemcontainer2.banner.subtitle!==undefined}}">
+                <view class="fixed-head-left">
+                    <text class="fixed-sub-title">{{itemcontainer2.banner.subtitle}}</text>
+                </view>
+                <view cashList="{{true}}" class="fixed-head-right">
+                    <text class="fixed-link">{{itemcontainer2.banner.link}}</text>
+                </view>
+            </view>
+            <view class="fixed-list">
+                <view bindtap="__e" class="fixed-product3" data-event-opts="{{[ [ 'tap',[ [ 'navClick',['$0'],[ [ ['itemcontainer2.data1','',index,'url'] ] ] ] ] ] ]}}" wx:for="{{itemcontainer2.data1}}" wx:key="index">
+                    <image class="fixed-image3" src="{{item.uri}}"></image>
+                    <view class="fixed-title">{{item.title}}</view>
+                    <view class="fixed-subtitle">{{item.subtitle}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

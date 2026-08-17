@@ -1,0 +1,65 @@
+<view>
+    <view class="page">
+        <view class="address-view">
+            <text class="titleTip">地址信息</text>
+            <view class="selected-choose">
+                <picker bindchange="__e" data-event-opts="{{[ [ 'change',[ [ 'areaPicker',['$event'] ] ] ] ]}}" range="{{areaArray}}" value="{{areaIndex}}">
+                    <view class="pickerview">
+                        <view class="label notnull">区域选择:</view>
+                        <view class="picker" wx:if="{{areaIndex!=-1}}">{{areaArray[areaIndex]}}</view>
+                        <view class="picker-init" wx:else>请选择</view>
+                    </view>
+                </picker>
+            </view>
+            <view class="divLine"></view>
+            <view class="number-choose" wx:if="{{areaIndex!=-1}}">
+                <view class="label notnull">楼栋选择</view>
+                <view class="sear-input">
+                    <input bindinput="__e" class="keyIpu" data-event-opts="{{[ [ 'input',[ [ 'numberChange',['$event'] ] ] ] ]}}" placeholder="关键字搜索" placeholderClass="peo-sear" value="{{buildText}}"></input>
+                    <button bindtap="__e" class="btn-search" data-event-opts="{{[ [ 'tap',[ [ 'searchClick',['picker'] ] ] ] ]}}">搜索</button>
+                </view>
+            </view>
+            <view class="divLine" wx:if="{{areaIndex!=-1}}"></view>
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['addressAllInput'] ] ] ]}}" iClass="noborder" isNotNull="{{true}}" maxlength="100" right="{{true}}" title="详细地址:" type="text" vueId="7ffc99ce-1"></i-input>
+        </view>
+        <view class="person-message">
+            <text class="titleTip">用户信息</text>
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['personNameInput'] ] ] ]}}" isNotNull="{{true}}" maxlength="10" right="{{true}}" title="用户姓名:" type="text" vueId="7ffc99ce-2"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['personPhoneInput'] ] ] ]}}" isNotNull="{{true}}" maxlength="11" right="{{true}}" title="手机号:" type="number" vueId="7ffc99ce-3"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['personCardNumInput'] ] ] ]}}" isNotNull="{{true}}" maxlength="20" right="{{true}}" title="身份证号:" type="text" vueId="7ffc99ce-4"></i-input>
+            <i-input bind:__l="__l" bind:change="__e" data-event-opts="{{[ [ '^change',[ ['remarkInput'] ] ] ]}}" iClass="noborder" maxlength="100" right="{{true}}" title="备注:" type="textarea" vueId="7ffc99ce-5"></i-input>
+        </view>
+        <view class="personCard-img">
+            <text class="titleTip notnull">身份证图片</text>
+            <view class="acc-img">
+                <view class="imgChoose">
+                    <view class="gallery">
+                        <view class="item" hidden="{{isCardImgOneAdd==0}}">
+                            <image bindtap="__e" class="item-img" data-event-opts="{{[ [ 'tap',[ [ 'previewCardImgOne',['$event'] ] ] ] ]}}" mode="aspectFill" src="{{cardImgOne}}"></image>
+                            <image bindtap="__e" class="delete" data-event-opts="{{[ [ 'tap',[ [ 'deleteFun',['$event'] ] ] ] ]}}" src="/static/images/img_delete.svg"></image>
+                        </view>
+                        <view bindtap="__e" class="img-add" data-event-opts="{{[ [ 'tap',[ [ 'chooseCardImgOne',['$event'] ] ] ] ]}}" hidden="{{isCardImgOneAdd==1}}">
+                            <text>身份证正面照</text>
+                        </view>
+                    </view>
+                    <view class="gallery">
+                        <view class="item" hidden="{{isCardImgTwoAdd==0}}">
+                            <image bindtap="__e" class="item-img" data-event-opts="{{[ [ 'tap',[ [ 'previewCardImgTwo',['$event'] ] ] ] ]}}" mode="aspectFill" src="{{cardImgTwo}}"></image>
+                            <image bindtap="__e" class="delete" data-event-opts="{{[ [ 'tap',[ [ 'deleteIcCard',['$event'] ] ] ] ]}}" src="/static/images/img_delete.svg"></image>
+                        </view>
+                        <view bindtap="__e" class="img-add" data-event-opts="{{[ [ 'tap',[ [ 'chooseCardImgTwo',['$event'] ] ] ] ]}}" hidden="{{isCardImgTwoAdd==1}}">
+                            <text>身份证反面照</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="person-message" wx:if="{{expander}}">
+            <i-input bind:__l="__l" disabled="{{true}}" right="{{true}}" title="拓展人手机号:" type="text" value="{{expander}}" vueId="7ffc99ce-6"></i-input>
+        </view>
+    </view>
+    <lb-picker bind:__l="__l" bind:cancel="__e" bind:change="__e" bind:confirm="__e" bind:input="__e" bind:show="__e" class="picker-lb vue-ref" data-event-opts="{{[ [ '^show',[ ['getNumber'] ] ],[ '^change',[ ['handleChange'] ] ],[ '^confirm',[ ['handleConfirm'] ] ],[ '^cancel',[ ['handleCancel'] ] ],[ '^input',[ [ '__set_model',[ '','value','$event',[] ] ] ] ] ]}}" data-ref="picker" list="{{list}}" loading="{{loading}}" mode="selector" value="{{value}}" vueId="7ffc99ce-7"></lb-picker>
+    <view class="confirm-sumbit-view">
+        <button bindtap="__e" class="btn-primary" data-event-opts="{{[ [ 'tap',[ [ 'save',['$event'] ] ] ] ]}}" disabled="{{disSumbit}}">提交</button>
+    </view>
+</view>

@@ -1,0 +1,68 @@
+page {
+    -webkit-overflow-scrolling: touch
+}
+
+.message-item {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #fff;
+    border: 2rpx solid #eee;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 180rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 10rpx auto;
+    padding: 10rpx;
+    width: 700rpx
+}
+
+.message-statusimg {
+    height: 50rpx;
+    width: 50rpx
+}
+
+.message-info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%
+}
+
+.message-title {
+    color: #2b2a2a;
+    font-size: 32rpx
+}
+
+.message-describe,.message-title {
+    font-family: 微软雅黑;
+    margin: 15rpx 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.message-describe {
+    color: #706f6f;
+    font-size: 28rpx
+}
+
+.create-time {
+    color: #979494;
+    font-family: 微软雅黑;
+    font-size: 25rpx;
+    margin: 15rpx 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.no-message-view {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 35%
+}

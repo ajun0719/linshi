@@ -1,0 +1,6 @@
+<view class="home_top">
+    <view bindtap="__e" class="userDefault_avatar" data-event-opts="{{[ [ 'tap',[ [ 'imgHeaderClick',['$event'] ] ] ] ]}}">
+        <image backgroundSize="cover" mode="aspectFill" src="/static/images/touxiang.png"></image>
+    </view>
+    <view class="shouji">{{userInfo.UserMob?userInfo.UserMob:''}}</view>
+</view>

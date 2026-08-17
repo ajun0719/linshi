@@ -1,0 +1,46 @@
+.i-noticebar {
+    background-color: #fefcec;
+    color: #f76a24;
+    font-size: 14px;
+    height: 72rpx;
+    line-height: 72rpx;
+    overflow: hidden
+}
+
+.i-noticebar,.i-noticebar-icon {
+    display: -webkit-flex;
+    display: flex
+}
+
+.i-noticebar-icon {
+    -webkit-align-items: center;
+    align-items: center;
+    margin-left: 30rpx
+}
+
+.i-noticebar-icon+wx-view {
+    margin-left: 10rpx
+}
+
+.i-noticebar-operation {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin-right: 16rpx
+}
+
+.i-noticebar-content-wrap {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0 30rpx;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.i-noticebar-content-wrap .i-noticebar-content {
+    position: absolute;
+    transition-duration: 20s
+}

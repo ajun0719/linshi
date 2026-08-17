@@ -1,0 +1,204 @@
+.main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%
+}
+
+.top {
+    height: 90rpx;
+    left: 0;
+    line-height: 90rpx;
+    margin-bottom: 10rpx;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.order-list-page {
+    background: #f0f0f0;
+    box-sizing: border-box;
+    height: 100%;
+    padding-left: 5rpx;
+    padding-right: 20rpx;
+    width: 100%
+}
+
+.order-list-page .order-item {
+    background-color: #fff;
+    border-radius: 30rpx;
+    height: auto;
+    margin: 15rpx 10rpx;
+    min-height: 180px;
+    width: 100%
+}
+
+.scoll-h {
+    height: 100%;
+    margin-top: 100rpx;
+    width: 100%
+}
+
+.orderStatus {
+    color: #f01717;
+    padding-right: 15rpx
+}
+
+.order-list-page .order-title,.orderStatus {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30rpx
+}
+
+.order-list-page .order-title {
+    color: #474646;
+    margin-left: 30rpx;
+    padding: 20rpx 30rpx 20rpx 0
+}
+
+.order-list-page .triangle {
+    border-left: 1px solid #999;
+    border-top: 1px solid #999;
+    height: 16rpx;
+    margin-left: 5rpx;
+    -webkit-transform: rotate(135deg) scale(.8);
+    transform: rotate(135deg) scale(.8);
+    width: 16rpx
+}
+
+.order-list-page .order-info {
+    border-bottom: 1px solid #f0f0f0;
+    display: -webkit-flex;
+    display: flex;
+    margin-left: 40rpx;
+    padding: 10rpx 30rpx 20rpx 0;
+    position: relative
+}
+
+.order-list-page .order-info wx-image {
+    height: 160rpx;
+    width: 114rpx
+}
+
+.order-list-page .order-desc {
+    color: #999;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 26rpx;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    margin-left: 24rpx;
+    padding: 20rpx 0
+}
+
+.order-list-page .showTime,.position {
+    font-size: 26rpx
+}
+
+.order-list-page .order-desc .delete-box {
+    padding: 30rpx;
+    position: absolute;
+    right: 0;
+    top: 10
+}
+
+.order-list-page .delete-box .delete {
+    color: #999;
+    font-size: 32rpx
+}
+
+.order-list-page .movie-name {
+    color: #666;
+    font-size: 30rpx;
+    margin-top: 15rpx;
+    width: 100%
+}
+
+.num {
+    color: #888585;
+    font-size: 28rpx
+}
+
+.order-list-page .order-more {
+    color: #4e4d4d;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 30rpx;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 20rpx 30rpx
+}
+
+.line-ellipsis {
+    margin-top: 5rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.coent_list {
+    background-color: #fff;
+    border-bottom-left-radius: 30rpx;
+    border-bottom-right-radius: 30rpx;
+    height: 100rpx;
+    position: relative;
+    width: 100%
+}
+
+.cancel-btn {
+    background-color: #e7e8e9;
+    border: 1rpx solid #fcfcfc;
+    color: #3a3939;
+    right: 250rpx
+}
+
+.cancel-btn,.pay-btn {
+    -webkit-align-items: center;
+    align-items: center;
+    display: inline-block;
+    font-size: 26rpx;
+    height: 60rpx;
+    line-height: 56rpx;
+    margin-right: 5rpx;
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    width: 170rpx
+}
+
+.pay-btn {
+    background-color: #e64340;
+    color: #fff;
+    right: 30rpx
+}
+
+.no-data-view {
+    left: 50%;
+    position: fixed;
+    top: 25%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 1000
+}
+
+.itemTop,.nameclass {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+
+.nameclass {
+    -webkit-flex-direction: column;
+    flex-direction: column
+}

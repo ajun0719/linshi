@@ -1,0 +1,30 @@
+<view class="menu_choose_box">
+    <view bindtap="__e" catchtouchmove="true" class="{{[showPicker?'pickerMask':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'maskClick',['$event'] ] ] ] ]}}"></view>
+    <view class="columns_box two_columns_box" wx:if="{{mode=='one'&&show==true&&showFlag==true}}">
+        <scroll-view class="two_columns h900" scrollY="true">
+            <view bindtap="__e" class="mli" data-event-opts="{{[ [ 'tap',[ [ 'chooseOne',[index] ] ] ] ]}}" wx:for="{{area}}" wx:key="index">
+                <text class="{{['uni_14',index==area_select?'actives':'']}}">{{item.townname}}</text>
+            </view>
+        </scroll-view>
+        <scroll-view class="two_columns two_columns_right h900" scrollY="true">
+            <view bindtap="__e" class="mli" data-event-opts="{{[ [ 'tap',[ [ 'chooseTwo',[index] ] ] ] ]}}" wx:for="{{address}}" wx:key="index">
+                <text class="{{['uni_14',index==street_select?'actives':'']}}">{{item.communityname}}</text>
+            </view>
+        </scroll-view>
+    </view>
+    <scroll-view class="columns_box one_columns_box h880" scrollY="true" wx:if="{{mode=='two'&&show==true&&showFlag==true}}">
+        <view bindtap="__e" class="mli" data-event-opts="{{[ [ 'tap',[ [ 'chooseRent',[index] ] ] ] ]}}" wx:for="{{rent}}" wx:key="index">
+            <text class="{{['uni_14',index==rent_select?'actives':'']}}">{{item}}</text>
+        </view>
+    </scroll-view>
+    <scroll-view class="columns_box one_columns_box h800" scrollY="true" wx:if="{{mode=='three'&&show==true&&showFlag==true}}">
+        <view bindtap="__e" class="mli" data-event-opts="{{[ [ 'tap',[ [ 'chooseHouseType',[index] ] ] ] ]}}" wx:for="{{house_type}}" wx:key="index">
+            <text class="{{['uni_14',index==house_type_select?'actives':'']}}">{{item.text}}</text>
+        </view>
+    </scroll-view>
+    <scroll-view class="columns_box one_columns_box h480" scrollY="true" wx:if="{{mode=='Five'&&show==true&&showFlag==true}}">
+        <view bindtap="__e" class="mli" data-event-opts="{{[ [ 'tap',[ [ 'SortType',[index] ] ] ] ]}}" wx:for="{{SortList}}" wx:key="index">
+            <text class="{{['uni_14',index==Sort_select?'actives':'']}}">{{item}}</text>
+        </view>
+    </scroll-view>
+</view>

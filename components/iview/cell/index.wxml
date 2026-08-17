@@ -1,0 +1,14 @@
+<view bindtap="__e" class="{{[ 'i-class i-cell '+(isLastCell?'i-cell-last':'')+' '+(isLink?'i-cell-access':'') ]}}" data-event-opts="{{[ [ 'tap',[ [ 'handleTap',['$event'] ] ] ] ]}}">
+    <view bindtap="__e" class="i-cell-icon" data-event-opts="{{[ [ 'tap',[ [ 'titleClick',['$event'] ] ] ] ]}}">
+        <slot name="icon"></slot>
+    </view>
+    <view bindtap="__e" class="i-cell-bd" data-event-opts="{{[ [ 'tap',[ [ 'titleClick',['$event'] ] ] ] ]}}">
+        <view class="i-cell-text" wx:if="{{title}}">{{title}}</view>
+        <view class="i-cell-desc" wx:if="{{label}}">{{label}}</view>
+        <slot></slot>
+    </view>
+    <view bindtap="__e" class="i-cell-ft" data-event-opts="{{[ [ 'tap',[ [ 'valueClick',['$event'] ] ] ] ]}}">
+        <block wx:if="{{value}}">{{value}}</block>
+        <slot name="footer" wx:else></slot>
+    </view>
+</view>

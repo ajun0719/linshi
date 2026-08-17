@@ -1,0 +1,64 @@
+.input_code-view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    padding: 30rpx 10rpx;
+    position: relative
+}
+
+.button-small-wrap {
+    position: absolute;
+    right: 30rpx
+}
+
+.btn-code-send {
+    background-color: silver
+}
+
+.btn-code,.btn-code-send {
+    color: #fff;
+    font-size: 25rpx
+}
+
+.btn-code {
+    background-color: #0081ff
+}
+
+.input_phone_view {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    padding: 35rpx 10rpx;
+    position: relative
+}
+
+.input-code {
+    font-size: 25rpx;
+    padding-left: 20rpx
+}
+
+.input-view {
+    background: #fff;
+    border-radius: 20rpx;
+    margin: 20rpx
+}
+
+.sms-input {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 85%
+}
+
+.btn_info {
+    margin: 80rpx 20rpx 0
+}

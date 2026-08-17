@@ -1,0 +1,4 @@
+<view class="tui-skeleton-cmomon tui-skeleton-box" style="{{'width:'+winWidth+'px'+';'+'height:'+winHeight+'px'+';'+'background-color:'+backgroundColor+';'}}">
+    <view class="tui-skeleton-cmomon" style="{{'width:'+item[$orig].width+'px'+';'+'height:'+item[$orig].height+'px'+';'+'left:'+item[$orig].left+'px'+';'+'top:'+item[$orig].top+'px'+';'+'background-color:'+skeletonBgColor+';'+'border-radius:'+item.m0+';'}}" wx:for="{{$root.l0}}" wx:key="index"></view>
+    <view class="{{['tui-loading',$root.m1]}}" wx:if="{{isLoading}}"></view>
+</view>

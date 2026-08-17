@@ -1,0 +1,96 @@
+.container-inner {
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse
+}
+
+.container,.container-inner {
+    display: -webkit-flex;
+    display: flex
+}
+
+.container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    padding: 10rpx
+}
+
+wx-input {
+    font-size: 32rpx;
+    padding: 5px;
+    text-align: center
+}
+
+.selection {
+    background: #fff;
+    border-radius: 20rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: 20rpx;
+    padding: 20rpx
+}
+
+.city-picker {
+    background-color: #f5f5f5;
+    margin-bottom: 30rpx;
+    margin-top: 10rpx;
+    padding: 20rpx 0 20rpx 0rpx
+}
+
+.item-letter {
+    color: #232324;
+    font-size: 35rpx;
+    font-weight: 700;
+    height: 40rpx;
+    margin-bottom: 15rpx
+}
+
+.item-city,.item-letter {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex
+}
+
+.item-city {
+    color: #474646;
+    font-size: 28rpx;
+    height: 80rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 5rpx 10rpx 5rpx 5rpx;
+    text-align: center;
+    width: 22%
+}
+
+.city-main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.hotcity-common {
+    color: #3a3939;
+    font-size: 35rpx;
+    font-weight: 700;
+    margin: 8rpx 0 8rpx 30rpx;
+    padding-bottom: 0
+}
+
+.current-city {
+    background: #fff;
+    border-radius: 8rpx;
+    color: #1b9ef5;
+    display: inline-block;
+    font-size: 28rpx;
+    margin: 16rpx 0rpx 16rpx 30rpx;
+    min-width: 149.5rpx;
+    padding: 10rpx;
+    text-align: center
+}
